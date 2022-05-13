@@ -1,0 +1,71 @@
+::ng-deep :root {
+  --blanco: #fff;
+  --celeste:rgb(14,146,172);
+  --azul-material:rgb(27,64,118);
+  --blanco-rgba:rgb(255,255,255,0.3);
+}
+.header-main-container,
+.header-info,
+.info {
+  display: flex;
+  height: 70px;
+  flex-direction: row;
+  justify-content: center;
+  background: #5a5a5a;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  background-color: var(--celeste);
+  color:var(--blanco);
+  font-weight: 500;
+}
+.header-main-container {
+  width: 100%;
+}
+.header-info {
+  width: 100%;
+}
+
+.info {
+  text-align: center;
+  border-left: 0.1px solid var(--blanco-rgba);
+}
+/*********** SIZE OF HEADER ITEMS ***/
+
+.info-empty {
+  width: 15%;
+}
+.info-adress {
+  width: 25%;
+}
+.info-email {
+  width: 20%;
+}
+
+.info-phone {
+  width: 15%;
+}
+.info-social {
+  width: 15%;
+}
+.info-social i{
+    margin-left:4px;
+    margin-right: 4px;
+  }
+
+.info p,
+i,
+mat-icon {
+  margin: 0;
+  padding: 0 5px 0 5px;
+  color: var(--blanco);
+}
+.info p {
+  font-size: 15px;
+}
+.info i {
+  font-size: 18px;
+}
+.info mat-icon {
+  font-size: 24px;
+}
