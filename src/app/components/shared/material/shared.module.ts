@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatIcon, MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -8,9 +11,13 @@ import {MatIcon, MatIconModule} from '@angular/material/icon';
   declarations: [],
   imports: [
     CommonModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,
+    MatButtonModule,
+    NgbModule
+    
 
   ],
-  exports: [MatIconModule]
+  exports: [MatIconModule, MatMenuModule, MatButtonModule, NgbModule]
 })
 export class SharedModule { }
