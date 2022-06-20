@@ -1,9 +1,9 @@
-<div class="header-main-container">
+<div class="header-main-container" (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'nofixed'">
   <div class="header-info">
     <div class="info-empty"></div>
     <div class="info info-adress">
       <mat-icon>room</mat-icon>
-      <p>Calle Elías Aguirre N° 180, Miraflores 15074 Lima, Peru</p>
+      <p>Miraflores 15074 Lima, Peru</p>
     </div>
     <div class="info-email info">
       <mat-icon>email</mat-icon>

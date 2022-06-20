@@ -4,5 +4,21 @@
 
 html, body { height: 100%; 
 margin:0; padding:0;
-box-sizing: border-box;}
+box-sizing: border-box;
+
+  }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.fixed{
+  position: fixed;
+  width: 100%;
+  transition: 0.25s linear;
+  top:0px;
+  border-bottom:1px solid rgba(0, 0, 0, 0.178);
+}
+
+.nofixed{
+  position: static;
+  transition: 0.25s linear;
+  top:-55px;
+}

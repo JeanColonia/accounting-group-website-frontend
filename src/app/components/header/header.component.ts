@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,7 +8,17 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  navbarfixed:boolean=false;
+  @HostListener('window:scroll', ['$event']) onscroll(){
+    if(window.scrollY>100){
+      this.navbarfixed=true;
+    }
+    else{
+      this.navbarfixed=false;
+    }
+  }
   ngOnInit(): void {
+    
   }
   
 

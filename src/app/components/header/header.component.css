@@ -3,9 +3,12 @@
   --celeste:rgb(14,146,172);
   --azul-material:rgb(27,64,118);
   --blanco-rgba:rgb(255,255,255,0.3);
+  --negro:rgb(32, 32, 32);
+
 }
 .header-main-container{
-
+position: fixed;
+z-index: 100;
 }
 .header-info,
 .info {
@@ -17,8 +20,8 @@
   align-items: center;
   align-self: center;
   align-content: center;
-  background-color: var(--blanco);
-  color:var(--celeste);
+  background-color: var(--negro);
+  color:var(--blanco);
   font-weight: 500;
 }
 .header-main-container {
@@ -30,7 +33,7 @@
 
 .info {
   text-align: center;
-  border-left: 0.1px solid var(--celeste);
+  border-left: 0.1px solid rgba(139, 139, 139, 0.5)
 }
 /*********** SIZE OF HEADER ITEMS ***/
 
@@ -60,16 +63,17 @@ i,
 mat-icon {
   margin: 3px;
   padding: 0 5px 0 5px;
-  color: var(--celeste);
+  color: var(--blanco);
 }
 .info p {
-  font-size: 15px;
+  font-size: 14px;
 }
 .info i {
-  font-size: 18px;
+  font-size: 15px;
 }
 .info mat-icon {
-  font-size: 24px;
+  padding-top:2px;
+  font-size: 18px;
 }
 
 .header-menu{
@@ -80,10 +84,9 @@ mat-icon {
   justify-content:space-around;
   align-items: center;
   margin: 0 auto;
-  background-color: var(--celeste);
+  background-color: var(--blanco);
   border-bottom: 1px solid rgba(255, 255, 255, 0.445);
   
-
 }
 .items{
   display: flex;
@@ -110,12 +113,12 @@ mat-icon {
 /******************* menu list******************************/
 
 .dropbtn {
-  background-color: var(--celeste);
-  color: var(--blanco);
+  background-color: var(--blanco);
+  color: var(--negro);
   padding: 16px;
-  font-size: 15px;
+  font-size: 16px;
   border: none;
-  
+  height: 100%;
   font-weight: 500;
 }
 
@@ -143,7 +146,8 @@ color: var(--celeste);}
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: var(--celeste);}
+.dropdown:hover .dropbtn {background-color: var(--celeste);
+color: var(--blanco);}
 .consulting {
   display: flex;
   flex-direction: column;
@@ -157,5 +161,5 @@ color: var(--celeste);}
   border: none;
   border-radius: 5px;
   
-  font-weight: 600;
+  font-weight: 500;
 }
