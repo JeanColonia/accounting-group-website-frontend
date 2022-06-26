@@ -1,0 +1,95 @@
+::ng-deep :root {
+    --blanco: #fff;
+    --celeste: rgb(16, 149, 175);
+    --celeste-rgba: rgba(16, 148, 175, 0.719);
+  
+    --azul-material: rgb(27, 64, 118);
+    --blanco-rgba: rgb(255, 255, 255, 0.3);
+    --fondo-gris: rgb(209, 209, 208);
+    --negro: rgb(17, 17, 17);
+  }
+  
+.footer-container{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:570px;
+    background-color:var(--negro);
+    margin-top:100px;
+}
+
+.footer-routes{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  height: 280px;
+  border-bottom: 1px solid var(--blanco-rgba);
+padding-bottom: 15px;
+}
+
+.services, .education, .eventos{
+  display:flex;
+  flex-direction:column;
+  margin-top:28px;  
+justify-content: space-around;
+}
+
+.footer-container a{
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+ .title {
+  font-size: 19px;
+font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+
+/********** footer social***/
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items:center;
+  width:50%;
+  height: 290px;
+  margin:0 auto;
+  padding-top:40px;
+
+}
+
+.footer-social img{
+  width: 105px;
+  height:45px;
+  margin-bottom:20px;
+  cursor: pointer;
+}
+
+.social-items{
+  display: flex;
+  flex-direction: row;
+  width:60%;
+  justify-content: space-around;
+  margin-bottom:15px;
+}
+
+.social-items i{
+  font-size: 22px;
+  color: var(--blanco);
+}
+
+.footer-social p{
+  font-size: 13px;
+  color: var(--blanco-rgba);
+  text-align: center;
+
+}
+
+.terms p{
+  font-size: 13px;
+  color: var(--blanco-rgba);
+  text-align: center;
+cursor: pointer;
+}

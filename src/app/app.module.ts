@@ -8,13 +8,17 @@ import { SharedModule } from './components/shared/material/shared.module';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { SliderComponent } from './components/inicio/slider/slider.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ExpertsComponent } from './components/experts/experts.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     InicioComponent,
-    SliderComponent
+    SliderComponent,
+    ExpertsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
