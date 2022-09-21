@@ -1,0 +1,324 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.about-container{
+    margin-top:63px;
+    
+  
+}
+.banner{
+    background-image: url('../.././../assets/nosotros/law-firm-26.jpg');
+    min-width:100%;
+    height:400px;
+    background-position:center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+.title{
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:0 auto;
+    text-align: center;
+    color: rgb(231, 231, 231);
+    padding-top:135px;
+    text-shadow:  .5px .5px rgb(0, 0, 0);
+   line-height:1;
+   letter-spacing:2;
+    
+}
+.title h1{
+    font-size: 60px;
+    font-weight: bold;
+    padding-bottom:10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.title h3, p{
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    line-height:1.5;
+    letter-spacing:1.5px;
+}
+
+.title p{
+    width:60%;
+    margin:0 auto;
+
+}
+
+/*HISTORIA*/
+
+.historia, .mision, .vision{
+    width:75%;
+    margin: 0 auto;
+    
+}
+.info-title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.info-title h3 {
+  font-size: 35px;
+  color: var(--negro);
+  font-family: "Playfair Display" ,"Rubik", sans-serif;
+  font-weight: 600;
+  letter-spacing: 4px;
+  line-height:2;
+
+}
+.info-title p {
+  font-size: 16px;
+  color: var(--negro);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 10px 0 10px 0;
+  line-height:1.5;
+  letter-spacing:2;
+  text-align: justify;
+}
+
+.linear {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.linear .linear-element {
+  width: 20%;
+  height: 2px;
+  background: var(--negro);
+}
+.linear .educacion {
+  width: 20%;
+  height: 5px;
+  background: var(--blanco);
+}
+.linear .center {
+  width: 34%;
+  height: 5px;
+  background: var(--celeste);
+}
+
+/*****CARDS***********/
+
+.confianza{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height:100%;
+    margin: 0 auto;
+    margin-top: 150px;
+  
+}
+.confianza-title h1{
+font-size: 30px;
+color: #1d1c22;
+text-align: center;
+font-weight: bold;
+font-family: "Playfair Display" ,"Rubik", sans-serif;
+margin-bottom:55px;
+}
+
+.cards{
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  
+}
+.card{
+width: 28%;
+height: 380px;
+border: none;
+box-shadow: -1px 0px 5px 2px rgba(194,194,194,0.67);
+-webkit-box-shadow: -1px 0px 5px 2px rgba(194,194,194,0.67);
+-moz-box-shadow: -1px 0px 5px 2px rgba(194,194,194,0.67);
+
+}
+
+.card mat-icon{
+    text-align: center;
+    margin: 0 auto;
+    margin-top:40px;
+    color: #1095AF;
+    width:100%;
+    height:60px;
+    font-size: 50px;
+    font-weight: 800;
+}
+.card h3{
+    font-size: 18px;
+   text-align: center;
+    width: 100%;
+    color: var(--negro);
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    line-height:1.5;
+    letter-spacing:2;
+    
+}
+.card p{
+    width: 100%;
+    font-size: 13.5px;
+    color: var(--negro);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin: 10px 0 10px 0;
+    line-height:1;
+    letter-spacing:1;
+    padding: 0px 40px;
+    text-align: justify;
+}
+
+
+/*CARDS HOVER**/
+.card:hover{
+    background-color: #1095AF;
+    width: 31%;
+height: 385px;
+}
+.card:hover mat-icon{
+    color: #fff;
+}
+.card:hover p{
+    color: #fff;
+}
+.card:hover h3{
+    color: #fff;
+    font-size: 23px;
+}
+
+
+/** NUESTRO EQUIPO**/
+
+
+
+.title-cursos-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--celeste);
+    margin-bottom: 40px;
+    margin-top: 100px;
+  }
+  
+  .title-cursos-container .team-title {
+    font-size: 35px;
+    color: var(--blanco);
+    padding-top: 12px;
+    text-transform: uppercase;
+    font-family: "Playfair Display" ,"Rubik", sans-serif;
+    font-weight: 500;
+    width: 35%;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    padding-top:40px;
+  }
+  
+ 
+
+/** NUESTRO EQUIPO - CARDS***/
+.team-cards{
+    display: flex;
+    flex-direction: row;
+    width:90%;
+    height:1000px;
+    justify-content: space-evenly;
+    margin-top:60px;
+    flex-wrap:wrap;
+  }
+
+  .team-cards .card-item{
+    display: flex;
+    flex-direction: row;
+    width:425px;
+    height:280px;
+    color: rgb(49, 49, 49);
+    background-color: rgba(255, 255, 255, 0.822);
+    margin-right: 40px;
+    border-radius: 8px;
+    margin-bottom:25px;
+  }
+  .card-item .card-head{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px !important;
+  }
+
+.card-item .card-head h3{
+    font-size: 20px;
+    text-transform: none;
+    padding: 3px 7px;
+    text-align: center;
+   
+}
+
+.card-item .card-head img{
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+    border-radius: 50% 50%;
+    
+}
+
+.card-item .card-head p{
+    font-size: 14px;
+    padding: 0px 7px;
+    text-align: center;
+    color: rgba(88, 88, 88, 0.856);
+
+}
+
+.desc {
+    width:500px;
+    border-left:1px solid rgba(88, 88, 88, 0.164);
+}
+.desc p{
+    font-size: 12px;
+    padding: 35px 20px;
+    font-family: sans-serif;
+    font-weight: normal;
+    text-align: start;
+
+
+}
+
+
+/**HOVER TEAMWORK CARDS */
+
+.card-item:hover .desc {
+    background-color: rgba(235, 233, 233, 0.767);
+
+    border-left:1px solid  #1095AF;
+    border-radius: 0 8px 8px 0;
+}
+.card-item:hover .card-head {
+    background-color: rgba(235, 233, 233, 0.767);
+    border-radius: 8px 0 0 8px;
+   
+}
