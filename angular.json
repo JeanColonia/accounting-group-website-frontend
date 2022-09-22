@@ -114,5 +114,7 @@
       }
     }
   },
-  "defaultProject": "grupo-contable-website-frontend"
+  "cli": {
+    "analytics": false
+  }
 }

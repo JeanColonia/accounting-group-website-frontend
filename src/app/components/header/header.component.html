@@ -1,32 +1,32 @@
 <div class="header-main-container" (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'nofixed'">
   <div class="header-info">
     <div class="info-empty"></div>
-    <div class="info info-adress">
+    <a class="info info-adress" href="https://www.google.com/maps/dir/-12.0521204,-77.059156/-12.11821,-77.03472/@-12.1166272,-77.0414174,15.33z/data=!4m4!4m3!1m1!4e1!1m0" target="_blank">
       <mat-icon>room</mat-icon>
       <p>Miraflores 15074 Lima, Peru</p>
-    </div>
-    <div class="info-email info">
+    </a>
+    <a class="info-email info" href="mailto:engshka123@gmail.com" target="_blank">
       <mat-icon>email</mat-icon>
       <p>informes@grupocontable.pe</p>
-    </div>
-    <div class="info-phone info">
+    </a>
+    <a class="info-phone info" href="tel:+51952919993">
       <mat-icon>phone</mat-icon>
       <p>952 919 993</p>
-    </div>
+    </a>
     <div class="info-social info">
-      <a href="" class="social-facebook">
+      <a href="https://www.facebook.com/GrupoContablePe" class="social-facebook"  target="_blank">
         <i class="fa-brands fa-facebook-f"></i>
       </a>
-      <a href="" class="social-twitter">
+      <a href="https://twitter.com/GrupoContablePe" class="social-twitter" target="_blank">
         <i class="fa-brands fa-twitter"></i>
       </a>
-      <a href="" class="social-instagram">
+      <a href="https://www.instagram.com/gcbschool/" class="social-instagram" target="_blank">
         <i class="fa-brands fa-instagram"></i>
       </a>
-      <a href="" class="social-linkedin">
+      <a href="https://www.linkedin.com/company/grupo-contable/" class="social-linkedin" target="_blank">
         <i class="fa-brands fa-linkedin-in"></i>
       </a>
-      <a href="" class="social-linkedin">
+      <a href="https://www.youtube.com/c/GrupoContablePe" class="social-linkedin" target="_blank">
         <i class="fa-brands fa-youtube"></i>
       </a>
     </div>
@@ -43,29 +43,29 @@
         <a class="dropbtn"  routerLink="" routerLinkActive="router-link-active" >Inicio</a>
       </div>
       <div class="dropdown">
-        <a class="dropbtn" routerLink="/about" >Nosotros</a>
+        <a class="dropbtn" routerLink="/nosotros" >Nosotros</a>
       </div>
       <div class="dropdown">
-        <a class="dropbtn">Servicios</a>
+        <a class="dropbtn" routerLink="/servicios">Servicios</a>
         <div class="dropdown-content">
-          <a href="#">Consultoria</a>
-          <a href="#">Tax & Legal</a>
-          <a href="#">Outsourcing</a>
-          <a href="#">Capacitación In House </a>
-          <a href="#">Auditoría</a>
+          <a routerLink="/servicios">Consultoria</a>
+          <a routerLink="/servicios">Tax & Legal</a>
+          <a routerLink="/servicios">Outsourcing</a>
+          <a routerLink="/servicios">Capacitación In House </a>
+          <a routerLink="/servicios">Auditoría</a>
         </div>
       </div>
       <div class="dropdown">
-        <a class="dropbtn">Cursos</a>
+        <a class="dropbtn" routerLink="/cursos">Cursos</a>
         <div class="dropdown-content">
-          <a href="#">Contables</a>
-          <a href="#">Tributarios </a>
-          <a href="#">Laborales</a>
-          <a href="#">Gubernamentales</a>
+          <a routerLink="/cursos">Contables</a>
+          <a routerLink="/cursos">Tributarios </a>
+          <a routerLink="/cursos">Laborales</a>
+          <a routerLink="/cursos">Gubernamentales</a>
         </div>
       </div>
       <div class="dropdown">
-        <a class="dropbtn">InCompany</a>
+        <a class="dropbtn" routerLink="/incompany">InCompany</a>
       </div>
       <div class="dropdown">
         <a class="dropbtn">Eventos</a>
@@ -80,6 +80,6 @@
     </div>
     
     <div class="consulting">
-      <a class="contacto">Contacto</a>
+      <a  href="https://api.whatsapp.com/send?phone=51952919993&text=Deseo%20Informacion%20sobre%20los%20cursos" class="contacto">Contacto</a>
     </div>
 </div>

@@ -1,0 +1,281 @@
+.cursos-container{
+    margin-top:64px;
+    width:100%;
+    min-height:100%;
+}
+
+.banner{
+    width:100%;
+    height:400px;
+    background-image:url("../../../assets/cursos/grupo-contable-capacitaciones-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom:40px;
+}
+
+.banner .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    position:relative;
+    background: rgb(69,179,214);
+    background: linear-gradient(177deg, rgba(69,179,214,0.8267506831834296) 0%, rgba(0,0,0,1) 100%); 
+}
+
+.title h1{
+ 
+    color: #fff;
+font-size: 45px;
+line-height: 1.5;
+font-family:"Roboto", sans-serif;
+letter-spacing: 1px;
+text-transform: uppercase;
+font-weight: bold;
+
+text-align: center;
+
+}
+
+.title p {
+    width: 50%;
+    color: #fff;
+    font-size: 20px;
+    text-align:center;
+    font-family: "Playfair Display" ,"Rubik", sans-serif;
+
+
+}
+
+
+/***CARDS***/
+
+.cards{
+    display: flex;
+    flex-direction:row;
+    width: 90%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    gap:20px;
+
+    
+}
+.card{
+width: 330px;
+height: 440px;
+border: none;
+box-shadow: -1px 0px 5px 2px rgba(194,194,194,0.67);
+-webkit-box-shadow: -1px 0px 5px 2px rgba(194,194,194,0.67);
+-moz-box-shadow: -1px 0px 5px 2px rgba(194,194,194,0.67);
+
+
+}
+
+.card img{
+    margin: 0 auto;
+    width:100%;
+    height:220px;
+}
+.card h3{
+    font-size: 20px;
+   text-align: center;
+    width: 100%;
+    color: var(--negro);
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    line-height:2;
+    letter-spacing:2;
+    
+}
+.card p{
+    width: 100%;
+    font-size: 13.5px;
+    color: var(--negro);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin: 10px 0 10px 0;
+    line-height:1;
+    letter-spacing:1;
+    padding: 0px 40px;
+    text-align: justify;
+}
+
+
+/*POR QUÉ ELEGIR A GRUPO CONTABLE*/
+
+.info-title {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    text-align: center;
+  }
+  
+  .info-title h3 {
+    font-size: 35px;
+    color: #0F92AD;
+    font-family: "Playfair Display" ,"Rubik", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height:1.5;
+  
+  }
+  .info-title p {
+    font-size: 16px;
+    color: var(--negro);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin: 0px 0 10px 0;
+    line-height:1.5;
+    letter-spacing:2;
+    text-align: justify;
+  }
+  
+  .linear {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .linear .linear-element {
+    width: 20%;
+    height: 2px;
+    background: var(--negro);
+  }
+  .linear .educacion {
+    width: 20%;
+    height: 5px;
+    background: var(--blanco);
+  }
+  .linear .center {
+    width: 34%;
+    height: 5px;
+    background: var(--celeste);
+  }
+  
+
+/*CARDS HOVER**/
+.card:hover {
+    background-color: #1095AF;
+
+width: 335px;
+height: 445px;
+    cursor: pointer;
+    transition: 0.10s ease-in-out;
+}
+
+.card:hover mat-icon {
+    color: #fff;
+}
+
+.card:hover p {
+    color: #fff;
+}
+
+.card:hover h3 {
+    color: #fff;
+    font-size: 23px;
+}
+
+/***** CARDS CURSOS ******/
+
+.cursos-items{
+    display:flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 50px;
+    gap:20px;
+}
+
+
+/**titulo tipo curso***/
+
+.tipo-curso{
+    width: 250px;
+    height:50px;
+    display: flex;
+    background: #199FB8;
+    text-align: center;
+    border-radius: 8px;
+    margin-left:50px;
+     clip-path: polygon(91% 0, 100% 50%, 88% 100%, 0% 100%, 4% 53%, 0% 0%);
+     margin-top:80px;
+     cursor:pointer;
+}
+.tipo-curso a{
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    font-family:"Rubik", sans-serif;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 10px;
+
+}
+
+.curso-card{
+    width:350px;
+    height:330px;
+}
+
+.curso-card img{
+    margin: 0 auto;
+    width:100%;
+    height:180px;
+}
+
+.curso-card h3{
+    font-size: 21px;
+    text-align: center;
+     width: 100%;
+     color: var(--negro);
+     font-family: "Roboto", sans-serif;
+     font-weight: 600;
+     line-height:1;
+     letter-spacing:0.5px;
+     padding-top:10px;
+     word-wrap: break-word;
+}
+
+.curso-card p{
+    width: 100%;
+    font-size: 13.5px;
+    color: rgb(90, 90, 90);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+/**CARD CURSO -- HOVER*/
+.curso-card:hover {
+    background-color: #3ba0ad;
+    width:352px;
+    height:332px;
+    cursor: pointer;
+    transition: 0.10s ease-in-out;
+}
+.curso-card:hovermat-icon {
+    color: #fff;
+}
+.curso-card:hover p {
+    color: #fff;
+}
+.curso-card:hover h3 {
+    color: #fff;
+    font-size: 23px;
+}

@@ -1,0 +1,161 @@
+.incompany-container{
+  display:flex;
+  flex-direction: column;
+  width:100%;
+  min-height:100vh;
+}
+/*********     CAROUSEL - IN COMPANY     **************/
+ngb-carousel{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  min-height: 450px;
+  cursor: pointer;
+  margin-top:63px;
+}
+
+.img-wrapper{
+  width:100%;
+  height: 450px;
+}
+.img-wrapper img{
+    width:100%;
+   height:100%;
+    object-fit:fill; 
+
+  }
+
+/************/  
+.info-title {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.info-title h3 {
+  font-size: 35px;
+  color: var(--negro);
+  font-family: "Playfair Display" ,"Rubik", sans-serif;
+  font-weight: 600;
+  letter-spacing: 4px;
+  line-height:2;
+
+}
+.info-title p {
+  font-size: 16px;
+  color: var(--negro);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 10px 0 10px 0;
+  line-height:1.5;
+  letter-spacing:2;
+  text-align: justify;
+}
+
+.linear {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.linear .linear-element {
+  width: 20%;
+  height: 2px;
+  background: var(--negro);
+}
+.linear .educacion {
+  width: 20%;
+  height: 5px;
+  background: var(--blanco);
+}
+.linear .center {
+  width: 34%;
+  height: 5px;
+  background: var(--celeste);
+}
+
+
+  /** CORP SERVICES *********/
+  .corp-service{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top:35px;
+    
+  }
+
+  .item{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+ 
+  }
+  .item div{
+    box-shadow: 2px 1px 5px 1px rgba(0,0,0,0.28);
+    -webkit-box-shadow: 2px 1px 5px 1px rgba(0,0,0,0.28);
+    -moz-box-shadow: 2px 1px 5px 1px rgba(0,0,0,0.28);
+  }
+.desc{
+  width:550px;
+  height:450px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items:center;
+}
+
+.desc h1{
+  font-weight: bold;
+  font-size: 25px;  
+  letter-spacing: 1.5px;
+  font-family: "Playfair Display" ,"Rubik", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 30px 0 30px;
+
+  
+}
+.desc p{
+  font-size: 16px;
+  padding: 0 30px 0 30px;
+  text-align: justify;
+  font-family: "Rubik", sans-serif;
+  color: rgb(102, 102, 102);
+
+}
+ .corp-service .img{
+    width:550px;
+    height:450px;
+    background-image: url("../../../assets/incompany/capacitacion-corporativa.jpeg");
+    object-fit:cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+  .img{
+    width:550px;
+    height:450px;
+    background-image: url("../../../assets/incompany/grupo-contable-scaled.jpeg");
+    object-fit:cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }

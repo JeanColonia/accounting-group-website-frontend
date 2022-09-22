@@ -1,0 +1,345 @@
+.services-container {
+    margin-top: 64px;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+.services-container .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background: rgb(64, 181, 170);
+    background: linear-gradient(90deg, rgba(64, 181, 170, 1) 0%, rgba(18, 113, 133, 1) 45%, rgba(2, 0, 36, 1) 100%);
+    text-align: center;
+
+}
+
+
+.banner h1 {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    letter-spacing: 2px;
+
+    color: #fff;
+    padding-bottom: 10px;
+
+}
+
+.banner p {
+    width: 55%;
+    font-size: 18px;
+    margin: 0 auto;
+    font-family: "Rubik", sans-serif;
+    color: #fff;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    word-wrap: break-word;
+    font-weight: 400;
+}
+
+
+
+.wedo {
+    width: 100%;
+    height: 1;
+}
+
+.info-title {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.info-title h3 {
+    font-size: 35px;
+    color: #0F92AD;
+    font-family: "Playfair Display", "Rubik", sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    line-height: 2;
+
+}
+
+.info-title p {
+    width: 60%;
+    font-size: 16px;
+    color: var(--negro);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    margin: 10px 0 10px 0;
+    line-height: 1.5;
+    letter-spacing: 2;
+    text-align: center;
+
+}
+
+.linear {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.linear .linear-element {
+    width: 20%;
+    height: 2px;
+    background: var(--negro);
+}
+
+.linear .educacion {
+    width: 20%;
+    height: 5px;
+    background: var(--blanco);
+}
+
+.linear .center {
+    width: 34%;
+    height: 5px;
+    background: var(--celeste);
+}
+
+
+
+/**CARDS **************/
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap !important;
+    justify-content: center;
+    margin-top: 55px;
+    gap: 60px;
+    margin-bottom: 70px;
+
+}
+
+.card {
+    width: 23%;
+    height: 300px;
+    border: none;
+    box-shadow: -1px 0px 5px 2px rgba(194, 194, 194, 0.67);
+    -webkit-box-shadow: -1px 0px 5px 2px rgba(194, 194, 194, 0.67);
+    -moz-box-shadow: -1px 0px 5px 2px rgba(194, 194, 194, 0.67);
+
+
+}
+
+.card mat-icon {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 40px;
+    color: #1095AF;
+    width: 100%;
+    height: 60px;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.card h3 {
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    color: var(--negro);
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 2;
+
+}
+
+.card p {
+    width: 100%;
+    font-size: 13.5px;
+    color: var(--negro);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin: 10px 0 10px 0;
+    line-height: 1;
+    letter-spacing: 1;
+    padding: 0px 40px;
+    text-align: justify;
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+
+/*CARDS HOVER**/
+.card:hover {
+    background-color: #1095AF;
+    width: 25%;
+    height: 310px;
+    cursor: pointer;
+    transition: 0.30s ease-in-out;
+}
+
+.card:hover mat-icon {
+    color: #fff;
+}
+
+.card:hover p {
+    color: #fff;
+}
+
+.card:hover h3 {
+    color: #fff;
+    font-size: 23px;
+}
+
+/***** PUNTOS FUERTES******/
+
+.puntosfuertes {
+    width: 79%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 100px;
+    box-shadow: -1px 0px 5px 2px rgba(194, 194, 194, 0.67);
+    -webkit-box-shadow: -1px 0px 5px 2px rgba(194, 194, 194, 0.67);
+    -moz-box-shadow: -1px 0px 5px 2px rgba(194, 194, 194, 0.67);
+}
+
+.puntosfuertes .img {
+
+    background-image: url("../../../assets/servicios/consultores-grupo-contable.jpg");
+    min-width: 50%;
+    height: 400px;
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+}
+
+.puntosfuertes .descripcion {
+    width: 50%;
+    padding: 20px;
+
+}
+
+.descripcion .container {
+    width: 90%;
+
+}
+
+.container p {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Rubik", sans-serif;
+}
+
+.container div{
+    width: 100%;
+    height: 17px;
+    background-color: rgba(192, 192, 192, 0.774);
+    border-radius: 5px;
+    margin-bottom:10px;
+}
+
+.item-1 div {
+    width: 0%;
+    height: 17px;
+  
+    border-radius: 5px;
+
+}
+
+.item-1 .child-1 {
+
+    animation: progress-item-1 10s linear forwards;
+    background-color: #1095AF;
+}
+
+.item-1 .child-2 {
+
+    animation: progress-item-2 10s linear forwards;
+    background-color: #2E716A;
+}
+
+.item-1 .child-3 {
+
+    animation: progress-item-3 10s linear forwards;
+        background-color: #33E811;
+}
+
+.item-1 .child-4 {
+
+    animation: progress-item-4 10s linear forwards;
+        background-color: #6E6CAF;
+
+}
+
+.item-1 .child-5 {
+
+    animation: progress-item-5 10s linear forwards;
+    background-color: #D30006;
+}
+
+.item-1 .child-6 {
+
+    animation: progress-item-6 10s linear forwards;
+    background-color: #E86503;
+}
+
+
+
+
+
+/*PROGRESS ANIMATION*/
+
+@keyframes progress-item-1 {
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes progress-item-2 {
+    100% {
+        width: 85%;
+    }
+}
+@keyframes progress-item-3 {
+    100% {
+        width: 60%;
+    }
+}
+
+@keyframes progress-item-4 {
+    100% {
+        width: 70%;
+    }
+}
+@keyframes progress-item-5 {
+    100% {
+        width: 78%;
+    }
+}
+@keyframes progress-item-6 {
+    100% {
+        width: 55%;
+    }
+}

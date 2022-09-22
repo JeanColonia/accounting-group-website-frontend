@@ -2,9 +2,16 @@
 
 @import '~swiper/swiper-bundle';
 
+
+html{
+  scrollbar-width: thin;
+  scrollbar-color: #1095AF rgba(146, 146, 146, 0.596) ;
+  
+}
 html, body { height: 100%; 
 margin:0; padding:0;
 box-sizing: border-box;
+
 
   }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -25,4 +32,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
   top:-55px;
 }
 
+
+
+::-webkit-scrollbar {
+
+  width: 8px;     /* Tamaño del scroll en vertical */
+
+  height: 8px;    /* Tamaño del scroll en horizontal */
+
+
+}
+
+
+.info-title h3 {
+  font-size: 35px;
+  color: var(--negro);
+  font-family: "Playfair Display" , sans-serif;
+  font-weight: 600;
+  letter-spacing: 4px;
+  line-height:2;
+  text-transform: uppercase;
+
+}
 

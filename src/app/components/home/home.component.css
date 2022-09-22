@@ -26,13 +26,14 @@
     padding-top: 50px;
     text-align: center;
     margin:30px 0 0px 0;
+   
   }
   
   .info-title h3 {
     font-size: 35px;
     color: var(--negro);
     padding-top: 40px;
-    font-family: "Rubik", sans-serif;
+    font-family: "Playfair Display" ,serif;
     font-weight: 600;
     letter-spacing: 2px;
     line-height: 1.5;

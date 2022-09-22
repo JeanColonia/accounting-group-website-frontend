@@ -11,6 +11,12 @@ position: fixed;
 z-index: 100;
 min-height: 10%;
 }
+
+a{
+  text-decoration: none;
+  font-family: "Playfair Display" ,"Rubik", sans-serif;
+
+}
 .header-info,
 .info {
   display: flex;
