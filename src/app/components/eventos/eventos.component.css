@@ -1,0 +1,33 @@
+.eventos-container{
+    margin-top:63px;
+    width:100%;
+    min-height:100%;
+
+}
+
+.eventos-container .banner{
+    background-image: url("../../../assets/eventos/congreso-tributario.jpeg");
+    width:100%;
+    height:500px;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    align-items:flex-start;
+}
+
+.banner h1{
+    width: 50%;
+    height:120px;
+    font-size: 45px;
+    font-weight: bold;
+    text-align:center;
+    line-height: 2;
+    letter-spacing: 1.5px;
+background-color: #199FB8;
+color: #fff;
+font-family: "Playfair Display", serif;
+}
+

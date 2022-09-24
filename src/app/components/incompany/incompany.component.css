@@ -48,7 +48,7 @@ ngb-carousel{
 }
 .info-title p {
   font-size: 16px;
-  color: var(--negro);
+  color: #5e5e5e;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   margin: 10px 0 10px 0;
@@ -132,7 +132,7 @@ ngb-carousel{
   
 }
 .desc p{
-  font-size: 16px;
+  font-size: 15px;
   padding: 0 30px 0 30px;
   text-align: justify;
   font-family: "Rubik", sans-serif;
@@ -159,3 +159,174 @@ ngb-carousel{
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  /****  CAPACITACIÓN EN TIEMPO REAL****/
+
+  
+.cards {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap !important;
+  justify-content: space-evenly;
+  margin-top: 55px;
+  margin-bottom: 70px;
+
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  border: none;
+  box-shadow: -1px 0px 5px 2px rgba(194, 194, 194, 0.67);
+  -webkit-box-shadow: -1px 0px 5px 2px rgba(194, 194, 194, 0.67);
+  -moz-box-shadow: -1px 0px 5px 2px rgba(194, 194, 194, 0.67);
+  margin-bottom:15px;
+
+}
+
+.card mat-icon {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  color: #1095AF;
+  width: 100%;
+  height: 60px;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.card h3 {
+  font-size: 18px;
+  text-align: center;
+  width: 100%;
+  color: var(--negro);
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 2;
+
+}
+
+.card p {
+  width: 100%;
+  font-size: 13.5px;
+  color: #5e5e5e;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 10px 0 10px 0;
+  line-height: 1;
+  padding: 0px 40px;
+  text-align: center;
+}
+
+.card svg {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom:10px;
+  color:#1095AF;
+
+}
+
+/*CARDS HOVER**/
+.card:hover {
+  background-color: #1095AF;
+  width: 310px;
+  height: 310px;
+  transition: 0.30s ease-in-out;
+}
+
+
+.card:hover svg {
+  color: #fff;
+}
+
+.card:hover p {
+  color: #fff;
+}
+
+.card:hover h3 {
+  color: #fff;
+  font-size: 23px;
+}
+
+
+/****** TEMARIO DE CURSOS EN - IN COMPANY******/
+
+
+.tipo-curso{
+  width: 250px;
+  height:60px;
+  display: flex;
+  background: #353535;
+  text-align: center;
+  border-radius: 8px;
+  margin-left:50px;
+   clip-path: polygon(91% 0, 100% 50%, 88% 100%, 0% 100%, 4% 53%, 0% 0%);
+   margin-top:80px;
+   cursor:pointer;
+}
+.tipo-curso a{
+  width: 100%;
+  height: 100%;
+  font-size: 17px;
+  font-family:"Rubik", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  margin-top: 10px;
+
+}
+
+.temario-contable{
+  width: 95%;
+  height: 100%;
+  display:flex;
+  flex-direction: row;
+  margin:0 auto;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items: flex-start;
+  margin-top:40px;
+  gap:3px;
+}
+
+.temario-contable div{
+  width: 320px;
+  height: 100px;
+  box-shadow: 2px 1px 5px 1px rgba(0,0,0,0.28);
+  -webkit-box-shadow: 2px 1px 5px 1px rgba(0,0,0,0.28);
+  -moz-box-shadow: 2px 1px 5px 1px rgba(0,0,0,0.28);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+  background: #373B44;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
+}
+.temario-contable div p{
+  color: rgb(204, 204, 204);
+  text-align: center;
+  padding:0 10px 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.temario-contable div:hover{
+  background: #2193b0;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  
+}
+
+
+.temario-contable div:hover P{
+   color: rgb(59, 59, 59);
+
+}
