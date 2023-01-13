@@ -1,0 +1,64 @@
+<div class="view-user-container">
+  <div class="header">
+    <a mat-raised-button routerLink="/dashboard/agregar-usuario"
+      >Crear Nuevo Usuario</a
+    >
+    <div class="title">
+      <h3>Listado de Usuarios</h3>
+    </div>
+  </div>
+  <mat-card class="card" *ngFor="let usuario of listaUsuarios">
+    <ng-container>
+      <div class="card-img" *ngIf="usuario.imagenUsuario; else SinImagen">
+        <img [src]="usuario.imagenUsuario" />
+      </div>
+    </ng-container>
+    <ng-template #SinImagen>
+      <div class="card-img">
+        <img src="../../../../assets/usuario-desconocido.png" />
+      </div>
+    </ng-template>
+
+    <div class="card-content">
+      <mat-card-title style="font-size: 13.5px; margin-top: -4px">
+        <mat-card-subtitle style="font-size: 14px"> Usuario </mat-card-subtitle>
+
+        {{ usuario.nombres }} {{ usuario.apellidos }}
+      </mat-card-title>
+
+      <mat-card-title style="font-size: 13.5px; margin-top: -4px">
+        <mat-card-subtitle style="font-size: 14px"> Cuenta </mat-card-subtitle>
+        {{ usuario.nombreUsuario }}
+      </mat-card-title>
+
+      <mat-card-title style="font-size: 13.5px">
+        <mat-card-subtitle style="font-size: 14px">
+          Tipo Usuario
+        </mat-card-subtitle>
+
+        {{ usuario.tipoUsuario }}
+      </mat-card-title>
+
+      <mat-card-title style="font-size: 13.5px">
+        <mat-card-subtitle style="font-size: 14px"> Estado </mat-card-subtitle>
+        {{ usuario.activo === true ? "Activo" : "Inactivo" }}
+      </mat-card-title>
+
+      <mat-card-title style="font-size: 13.5px">
+        <mat-card-subtitle style="font-size: 14px"> Correo </mat-card-subtitle>
+        {{ usuario.email }}
+      </mat-card-title>
+    </div>
+
+    <div class="card-actions">
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="ActualizarUsuario(usuario.idUsuario)">
+          <i class="fa-solid fa-pen"></i>
+        </button> 
+        <button mat-raised-button color="warn" (click)="eliminarUsuario(usuario.idUsuario)">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </mat-card-actions>
+    </div>
+  </mat-card>
+</div>

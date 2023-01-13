@@ -1,0 +1,112 @@
+<div class="dash-container">
+  <div class="sidebar">
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+      <a
+        class="sidebar-brand d-flex align-items-center justify-content-center"
+        routerLink="/dashboard/"
+      >
+        <div
+          class="sidebar-brand-icon"
+          *ngIf="getUsuarioData.imagenUsuario; else sinFoto"
+        >
+          <img
+            style="width: 50px; height: 50px"
+            [src]="getUsuarioData.imagenUsuario"
+            alt=""
+          />
+        </div>
+        <ng-template #sinFoto>
+          <div class="sidebar-brand-icon" #sinFoto>
+            <img
+              style="width: 50px; height: 50px"
+              src="../../../assets/usuario-desconocido.png"
+              alt=""
+            />
+          </div>
+        </ng-template>
+        <div class="sidebar-brand-text mx-3">{{ getUsuarioData.nombres }}</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0" />
+
+      <li class="nav-item active" *ngIf="rol=='Administrador'">
+        <a class="nav-link" routerLink="/dashboard/ver-usuarios">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Usuarios</span></a
+        >
+      </li>
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
+
+      <li class="nav-item active" *ngIf="rol=='Administrador'">
+        <a class="nav-link" routerLink="/dashboard/ver-cursos">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Cursos</span></a
+        > 
+      </li>
+      
+      <!-- Divider -->
+      <hr class="sidebar-divider" *ngIf="rol=='Administrador'"/>
+
+      <li class="nav-item active" *ngIf="rol=='Administrador'">
+        <a class="nav-link" routerLink="/dashboard/ver-categoria-curso">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Categorias de Cursos</span></a
+        >
+      </li>
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
+      <li class="nav-item active" *ngIf="rol=='Administrador'">
+        <a class="nav-link" routerLink="/dashboard/ver-modalidades">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Modalidad de Cursos</span></a
+        >
+      </li>
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
+
+      <li class="nav-item active" >
+        <a class="nav-link" routerLink="/dashboard/ver-docentes">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Docentes</span></a
+        >
+      </li>
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
+
+      <li class="nav-item active" *ngIf="rol=='Administrador'">
+        <a class="nav-link" routerLink="/dashboard/ver-eventos">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Eventos</span></a
+        >
+      </li>
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
+
+      <li class="nav-item active" *ngIf="rol=='Administrador'">
+        <a class="nav-link" routerLink="/dashboard/ver-blogs">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Blogs</span></a
+        >
+      </li>
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
+
+   
+
+      <li class="nav-item active">
+        <a class="nav-link" style="cursor: pointer" (click)="Salir()">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Salir</span></a
+        >
+      </li>
+      <!-- Divider -->
+      <hr class="sidebar-divider" />
+    </ul>
+  </div>
+  <div class="dash-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

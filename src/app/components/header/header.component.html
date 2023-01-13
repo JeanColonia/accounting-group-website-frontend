@@ -34,14 +34,12 @@
   </div>
   <div class="header-menu">
     <!-- -->
-    <div class="logo">
+    <a class="logo" routerLink="/">
       <img class="img-logo"src="../../../assets/imgs/logo/grupo-contable.png" >
       
-  </div>
+    </a>
     <div class="items">
-      <div class="dropdown">
-        <a class="dropbtn"  routerLink="" routerLinkActive="router-link-active" >Inicio</a>
-      </div>
+
       <div class="dropdown">
         <a class="dropbtn" routerLink="/nosotros" >Nosotros</a>
       </div>
@@ -82,4 +80,25 @@
     <div class="consulting">
       <a  href="https://api.whatsapp.com/send?phone=51952919993&text=Deseo%20Informacion%20sobre%20los%20cursos" class="contacto">Contacto</a>
     </div>
+
+
+    
+    <div class="consulting" *ngIf="token">
+      <a  routerLink="/dashboard" class="login">
+        Gestionar
+      </a>
+    </div>
+
+    <div class="consulting" *ngIf="!token">
+      <a  routerLink="/login" class="login">
+        <i class="fa-solid fa-user"></i>
+      </a>
+    </div>
+    
+    <div class="consulting" *ngIf="token">
+      <a  (click)="removeToken()" class="login">
+        <i class="fa-solid fa-right-from-bracket"></i>
+      </a>
+    </div>
+
 </div>

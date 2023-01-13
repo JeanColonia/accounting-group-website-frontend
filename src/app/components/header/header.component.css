@@ -14,7 +14,7 @@ min-height: 10%;
 
 a{
   text-decoration: none;
-  font-family: "Playfair Display" ,"Rubik", sans-serif;
+  font-family: "Source Sans Pro","Playfair Display" ,"Rubik", sans-serif;
 
 }
 .header-info,
@@ -91,7 +91,7 @@ mat-icon {
   justify-content:space-around;
   align-items: center;
   margin: 0 auto;
-  background-color: var(--blanco);
+  background-color: var(--celeste);
   border-bottom: 1px solid rgba(255, 255, 255, 0.445);
   
 }
@@ -99,7 +99,7 @@ mat-icon {
   display: flex;
   flex-direction: row;
   justify-content:center;
-  align-items: center;
+  align-items: center;  
 }
 
 .logo{
@@ -121,8 +121,8 @@ mat-icon {
 /******************* menu list******************************/
 
 .dropbtn {
-  background-color: var(--blanco);
-  color: var(--negro);
+  background-color: var(--celeste);
+  color: var(--blanco);
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -180,10 +180,37 @@ color: var(--blanco);}
 
 }
 .contacto {
-  top:5px;
+  text-decoration: none;
+  list-style: none;
+  cursor:pointer;
+  color: var(--blanco );
+  border: 1px solid #fff;
+  margin-top:4px;
+  padding:6px 4px ;
+  border-radius: 30px;
+}
+
+.contacto:hover {
+
+  color: var(--celeste );
+background-color: #fff;
+}
+
+
+.login{
+
   text-decoration: none;
   list-style: none;
   cursor:pointer;
   color: var(--blanco );
   padding-top:7px;
+  font-size:18px;
+}
+
+
+.login:hover i{
+  color: rgb(219, 219, 219);
+  font-size:22px;
+  margin-top:-4px;
+
 }

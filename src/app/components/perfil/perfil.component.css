@@ -1,0 +1,57 @@
+.perfil-container{
+    width: 82vw;
+    height: 100%;
+    margin-top:15px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+mat-card{
+    width: 60%;      
+    margin: 60px auto;
+    background-color: #0f8ea7de;
+    color:rgb(238, 238, 238);
+    
+}
+
+.card-main{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Source Sans Pro', 'Roboto', sans-serif;
+    font-size: 15.5px;
+}
+
+.card-main .title, .description{
+width: 40%;
+height: 45px;
+display:flex;
+flex-direction: row;
+width: 100%;
+height: 60px;
+justify-content: flex-start;
+align-items: center;
+
+}
+
+.card-main .title{
+ 
+    margin-left:35px;
+    border-right: 1px solid rgb(199, 199, 199);
+    width: 40%;
+    }
+    
+    
+    
+.card-main .description{
+ 
+    margin-left:35px;
+
+    }
+    

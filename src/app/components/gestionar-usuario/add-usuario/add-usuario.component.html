@@ -1,0 +1,85 @@
+<div class="add-user-container">
+  <div class="header">
+    <div class="title">
+      <h3>Crear Nuevo Usuario</h3>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <form class="form-datos" (ngSubmit)="agregarUsuario()">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombres</mat-label>
+        <input matInput name="nombres" [(ngModel)]="formUsuario.nombres"/>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Apellidos</mat-label>
+        <input matInput  name="apellidos"  [(ngModel)]="formUsuario.apellidos"/>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input name="email" [(ngModel)]="formUsuario.email" type="email" matInput />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Usuario</mat-label>
+        <input matInput name="nombreUsuario" [(ngModel)]="formUsuario.nombreUsuario"/>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input name="pass" [(ngModel)]="formUsuario.pass" matInput [type]="hide ? 'password' : 'text'" />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Tipo Usuario</mat-label>
+        <mat-select name="tipoUsuario" [(ngModel)]="formUsuario.tipoUsuario">
+          <mat-option
+            *ngFor="let tipouser of listaTipoUsuario"
+            [value]="tipouser"
+            >{{ tipouser }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+
+
+      <mat-slide-toggle color="primary" name="activo" [(ngModel)]="formUsuario.activo">
+        <mat-label>Estado Usuario</mat-label>
+      </mat-slide-toggle>
+
+   <mat-card-actions style="width:100%; margin-top:35px;">
+    <button type="submit" mat-raised-button color="primary">Agregar Usuario</button>
+
+    <a routerLink="/dashboard/ver-usuarios" mat-raised-button  style="margin-left:30px; ">Cancelar</a>
+   </mat-card-actions>
+
+    </form>
+
+    <form  (ngSubmit)="onUpload()" novalidate class="form-imagen" enctype="multipart/form-data">
+      Agregar Imagen:
+
+        <input  #imagenInputFile id="imagen" type="file"  accept="image/png, image/jpeg,image/jpg, image/tiff" (change)="onFileChange($event)" />
+
+
+        <div *ngIf="formUsuario.imagenUsuario" style="margin-top:20px; width: 100%;">
+         <h5>Vista Previa:</h5>
+         <img class="image-thumbnail" style="max-width: 100px;" [src]="formUsuario.imagenUsuario" alt="">
+        </div>
+
+<mat-card-actions style="margin-top:50px; width: 100%;">
+  <button style="margin-right:25px;" type="submit" mat-raised-button color="primary" [disabled]="!imagen"><i class="fa-solid fa-cloud-arrow-up"></i></button>
+  <button type="submit" mat-raised-button color="info" [disabled]="!imagen" (click)="reset()"><i class="fa-solid fa-repeat"></i></button>
+
+</mat-card-actions>
+    </form>
+  </div>
+</div>

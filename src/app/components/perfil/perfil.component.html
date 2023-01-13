@@ -1,0 +1,58 @@
+<div class="perfil-container">
+  <mat-card>
+    <div class="card-main">
+      <div class="title">
+        Nombre y Apellidos:
+      </div>
+      <div class="description">
+        <p>{{getUsuarioData.nombres}} {{getUsuarioData.apellidos}}</p>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+
+    <div class="card-main">
+      <div class="title">
+        Email:
+      </div>
+      <div class="description">
+        <p>{{getUsuarioData.email}}<p>
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="card-main">
+      <div class="title">
+        Nombre de Usuario:
+      </div>
+      <div class="description">
+        <p>{{getUsuarioData.nombreUsuario}}</p>
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="card-main">
+      <div class="title">
+        Tipo de Usuario:
+      </div>
+      <div class="description">
+        <p> {{getUsuarioData.tipoUsuario}} </p>
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="card-main">
+      <div class="title">
+        Estado
+      </div>
+      <div class="description">
+        <p>{{getUsuarioData.activo? 'Activo' : 'Inactivo'}}</p>  
+      </div>
+    </div>
+
+    <mat-divider></mat-divider>
+   
+  </mat-card> 
+</div>

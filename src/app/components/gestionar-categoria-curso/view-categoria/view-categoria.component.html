@@ -1,0 +1,41 @@
+<div class="perfil-container">
+
+  <div class="header">
+    <a mat-raised-button routerLink="/dashboard/agregar-categoria-curso"
+      >Crear categoría</a
+    >
+    <div class="title">
+      <h3>Listado de Categorías de Cursos</h3>
+    </div>
+  </div>
+  
+  <mat-card *ngFor="let categoria of listaCategorias">
+    <div class="card-main">
+      <div class="title">
+        {{ categoria.tituloCategoriaCurso }}
+      </div>
+      <div class="description">
+        <p>{{ categoria.descripcion }}</p>
+      </div>
+      <div class="card-actions">
+        <mat-card-actions>
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="actualizarCategoria(categoria.idCategoriaCurso)"
+          >
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button
+            mat-raised-button
+            color="warn"
+            (click)="eliminarCategoria(categoria.idCategoriaCurso)"
+          >
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </mat-card-actions>
+      </div>
+    </div>
+
+  </mat-card>
+</div>

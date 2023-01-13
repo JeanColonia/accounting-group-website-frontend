@@ -1,3 +1,4 @@
+
 .cursos-container{
     margin-top:64px;
     width:100%;
@@ -13,6 +14,53 @@
     background-size: cover;
     margin-bottom:40px;
 }
+
+.ejecutiva{
+    width: 80%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top:130px;
+  
+  }
+  .ejecutiva .ejecutiva-desc{
+    width: 50%;
+    margin-top:-50px;
+  
+  }
+  
+  .ejecutiva .ejecutiva-desc h3{
+    font-size: 45px;
+    color: var(--celeste);
+    font-weight: bold;
+    line-height: 1.1;
+    margin-top:10px;
+  
+  }
+  
+  .ejecutiva .ejecutiva-desc p{
+    font-size: 21px;
+    color: #202E44;
+    text-align: center;  
+    text-align:left;
+    width: 90%;
+    line-height: 1.1;
+    text-align: justify;
+    margin-top:10px;
+  
+  }
+  .ejecutiva .ejecutiva-img{
+    width: 50%;
+  }
+  
+  .ejecutiva .ejecutiva-img img{
+    width:100%;
+    height:450px;
+    object-fit: contain;
+  }
 
 .banner .title{
     display: flex;
@@ -31,7 +79,7 @@
     color: #fff;
 font-size: 45px;
 line-height: 1.5;
-font-family:"Roboto", sans-serif;
+font-family: "Source Sans Pro","Playfair Display" ,"Rubik", sans-serif;
 letter-spacing: 1px;
 text-transform: uppercase;
 font-weight: bold;
@@ -40,12 +88,12 @@ text-align: center;
 
 }
 
-.title p {
+.title .paragraph   {
     width: 50%;
     color: #fff;
     font-size: 20px;
     text-align:center;
-    font-family: "Playfair Display" ,"Rubik", sans-serif;
+    font-family: "Source Sans Pro","Playfair Display" ,"Rubik", sans-serif;
 
 
 }
@@ -53,60 +101,71 @@ text-align: center;
 
 /***CARDS***/
 
-.cards{
-    display: flex;
-    flex-direction:row;
-    width: 90%;
-    height: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 40px;
-    gap:20px;
-
-    
+.card-brindamos{
+  width:95%;
+  display:flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-top:60px;
 }
-.card{
-width: 330px;
-height: 440px;
-border: none;
-box-shadow: -1px 0px 5px 2px rgba(194,194,194,0.67);
--webkit-box-shadow: -1px 0px 5px 2px rgba(194,194,194,0.67);
--moz-box-shadow: -1px 0px 5px 2px rgba(194,194,194,0.67);
+/********* ICONS-HOME********/
 
-
+mat-accordion{
+width: 230px;
+margin:0;
+padding:0;
+font-family: 'Source Sans Pro';
+margin-bottom:20px;
 }
 
-.card img{
-    margin: 0 auto;
-    width:100%;
-    height:220px;
+mat-accordion:hover mat-panel-title p  {
+  color:var(--celeste);
 }
-.card h3{
-    font-size: 20px;
-   text-align: center;
-    width: 100%;
-    color: var(--negro);
-    font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    line-height:2;
-    letter-spacing:2;
-    
+.icon-home{
+  width: 40px;
+  height:40px;
+  background-color: rgb(16, 149, 175);
+  color: #fff;
+  border-radius: 50%;
+  margin-right:10px;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
 }
-.card p{
-    width: 100%;
-    font-size: 13.5px;
-    color: var(--negro);
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    margin: 10px 0 10px 0;
-    line-height:1;
-    letter-spacing:1;
-    padding: 0px 40px;
-    text-align: justify;
+.icon-home mat-icon{
+  font-size: 25px;
+  margin:0;
+  padding:0;
+}
+mat-expansion-panel-header{
+  height: 120px;
 }
 
+mat-panel-title {
+  display:flex;
+  justify-content: center;
+}
+mat-panel-title p {
+  font-family: 'Source Sans Pro';
+font-weight: bolder;
+  font-size: 18px;
+  margin: 0;
+  padding:0;
+ 
+}
 
+/************* titulos separadores ******/
+
+.titulos{
+  font-size: 45px;
+  color: var(--celeste);
+  font-weight: bold;
+  line-height: 1.1;
+  margin-top:10px;
+
+}
 /*POR QUÉ ELEGIR A GRUPO CONTABLE*/
 
 .info-title {
@@ -114,10 +173,11 @@ box-shadow: -1px 0px 5px 2px rgba(194,194,194,0.67);
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     padding-top: 40px;
     text-align: center;
+    padding-left:20px;
   }
   
   .info-title h3 {
@@ -129,65 +189,7 @@ box-shadow: -1px 0px 5px 2px rgba(194,194,194,0.67);
     line-height:1.5;
   
   }
-  .info-title p {
-    font-size: 16px;
-    color: var(--negro);
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    margin: 0px 0 10px 0;
-    line-height:1.5;
-    letter-spacing:2;
-    text-align: justify;
-  }
-  
-  .linear {
-    display: flex;
-    flex-direction: row;
-    width: 20%;
-    height: 30px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .linear .linear-element {
-    width: 20%;
-    height: 2px;
-    background: var(--negro);
-  }
-  .linear .educacion {
-    width: 20%;
-    height: 5px;
-    background: var(--blanco);
-  }
-  .linear .center {
-    width: 34%;
-    height: 5px;
-    background: var(--celeste);
-  }
-  
 
-/*CARDS HOVER**/
-.card:hover {
-    background-color: #1095AF;
-
-width: 335px;
-height: 445px;
-    cursor: pointer;
-    transition: 0.10s ease-in-out;
-}
-
-.card:hover mat-icon {
-    color: #fff;
-}
-
-.card:hover p {
-    color: #fff;
-}
-
-.card:hover h3 {
-    color: #fff;
-    font-size: 23px;
-}
 
 /***** CARDS CURSOS ******/
 
@@ -227,7 +229,7 @@ height: 445px;
     margin-top: 10px;
 
 }
-
+/* 
 .curso-card{
     width:350px;
     height:330px;
@@ -259,23 +261,161 @@ height: 445px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     text-align: center;
+} */
+
+
+/******** course card *************/
+.course-card {
+    width: 220px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    color:black;
+    cursor:pointer;
+    background-color: rgba(245, 243, 243, 0.432);
 }
 
-/**CARD CURSO -- HOVER*/
-.curso-card:hover {
-    background-color: #3ba0ad;
-    width:352px;
-    height:332px;
-    cursor: pointer;
-    transition: 0.10s ease-in-out;
+.course-img {
+    width: 100%;
+    height: 130px;
 }
-.curso-card:hovermat-icon {
-    color: #fff;
+
+.course-img img {
+    width: 100%;
+    height: 100%;
 }
-.curso-card:hover p {
-    color: #fff;
+
+.course-desc  {
+    width: 100%;
+    height: 130px;
+    padding-left: 1px;
+
+
 }
-.curso-card:hover h3 {
-    color: #fff;
-    font-size: 23px;
+
+.course-desc .title{
+    display:block !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.1;
+padding:0px 5px 0 0px;
+margin-top:8px;
 }
+
+/************** CURSOS TABSSSSSSS*/
+/************ BODY**************************/
+
+.body-container {
+    width: 98%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+
+
+/**** TAB-HOME********/
+.tab-home{
+    width: 95%;
+    margin:0 auto;
+    height:500px;
+
+}
+
+.template-header{
+    margin-top:35px;
+}
+.template-header h2{
+    font-size: 24px;
+    font-weight: 550;
+    padding:0;
+    margin:0;
+    padding-bottom:6px;
+}
+
+.template-header p{
+    font-size: 16px;
+    padding-bottom:10px;
+}
+
+
+
+.iniciar-sesion{
+    background-color:#fff;
+    width: 170px;
+    height: 45px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-bottom:30px;
+        
+    border: 1px solid rgb(61, 61, 61);
+ 
+}
+.iniciar-sesion a{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 550;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    text-decoration:none;
+}
+.ancla:hover a{
+    font-size: 13px;
+    
+}
+.iniciar-sesion:hover{
+   
+    font-size: 14px;
+    background-color:  rgb(0, 0, 0);
+
+}
+
+.iniciar-sesion:hover a{
+    color:#fff;
+}
+
+
+
+.example-tab-icon{
+    margin-left:3px;
+    margin-top:-6px;
+    color: rgb(31, 31, 31);
+}
+.title-h2 {
+    font-family: 'Source Sans Pro', 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+
+/*********** COURSES***************/
+.courses-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+
+/****** SWIPER *******************/
+
+.swiper-container {
+    width: 100%;
+    height: 300px;
+  }
+  

@@ -1,0 +1,42 @@
+<div class="perfil-container">
+
+    <div class="header">
+      <a mat-raised-button routerLink="/dashboard/agregar-modalidad"
+        >Crear modalidad</a
+      >
+      <div class="title">
+        <h3>Listado de Modalidades de Cursos</h3>
+      </div>
+    </div>
+    
+    <mat-card *ngFor="let modalidad of listaModalidad">
+      <div class="card-main">
+        <div class="title">
+          {{ modalidad.nombre }}
+        </div>
+        <div class="description">
+          <p>{{ modalidad.descripcion }}</p>
+        </div>
+        <div class="card-actions">
+          <mat-card-actions>
+            <button
+              mat-raised-button
+              color="primary"
+              (click)="actualizarModalidad(modalidad.idModalidad)"
+            >
+              <i class="fa-solid fa-pen"></i>
+            </button>
+            <button
+              mat-raised-button
+              color="warn"
+              (click)="eliminarModalidad(modalidad.idModalidad)"
+            >
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </mat-card-actions>
+        </div>
+      </div>
+  
+    </mat-card>
+  </div>
+  

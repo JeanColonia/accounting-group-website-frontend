@@ -1,0 +1,37 @@
+<div class="login-container">
+   <div class="form-container">
+<form (ngSubmit)="Ingresar()">
+    
+    <mat-card-title>
+        <h4 style="color:rgb(16, 149, 175); font-family: 'Source Sans Pro', 'Roboto', sans-serif;    font-size: 25px;
+        font-weight: bold;">Login</h4>
+    </mat-card-title>
+    <mat-form-field appearance="outline">
+        <mat-label>Usuario</mat-label>
+        <input matInput name="nombreUsuario" [(ngModel)]="formLogin.nombreUsuario"/>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input name="pass" [(ngModel)]="formLogin.pass" matInput [type]="hide ? 'password' : 'text'" />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field> 
+
+      <mat-card-actions style="width:100%; margin-top:35px;">
+        <button type="submit" mat-raised-button color="primary">Ingresar</button>
+       </mat-card-actions>
+</form>
+   </div>
+
+   <div class="img-form">
+    <img src="../../../assets/login.png" alt="">
+   </div>
+</div>

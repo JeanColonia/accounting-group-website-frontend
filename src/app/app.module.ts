@@ -20,6 +20,51 @@ import { EventosComponent } from './components/eventos/eventos.component';
 import { PublicacionesComponent } from './components/publicaciones/publicaciones.component';
 import { DocentesComponent } from './components/docentes/docentes.component';
 
+import { FormsModule } from '@angular/forms';
+
+
+
+/*** Swiper */
+
+import { SwiperModule } from 'swiper/angular';
+
+/**http */
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { CourseService } from './services/course.service';
+import { ViewCursoComponent } from './components/gestion-curso/view-curso/view-curso.component';
+import { AddCursoComponent } from './components/gestion-curso/add-curso/add-curso.component';
+import { ActualizarCursoComponent } from './components/gestion-curso/actualizar-curso/actualizar-curso.component';
+import { CursoComponent } from './components/curso/curso.component';
+import { ViewBlogComponent } from './components/gestionar-blog/view-blog/view-blog.component';
+import { AddBlogComponent } from './components/gestionar-blog/add-blog/add-blog.component';
+import { ActualizarBlogComponent } from './components/gestionar-blog/actualizar-blog/actualizar-blog.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { ViewEventoComponent } from './components/gestionar-evento/view-evento/view-evento.component';
+import { ActualizarEventoComponent } from './components/gestionar-evento/actualizar-evento/actualizar-evento.component';
+import { AddEventoComponent } from './components/gestionar-evento/add-evento/add-evento.component';
+import { ViewUsuarioComponent } from './components/gestionar-usuario/view-usuario/view-usuario.component';
+import { AddUsuarioComponent } from './components/gestionar-usuario/add-usuario/add-usuario.component';
+import { ActualizarUsuarioComponent } from './components/gestionar-usuario/actualizar-usuario/actualizar-usuario.component';
+import { ViewDocenteComponent } from './components/gestionar-docentes/view-docente/view-docente.component';
+import { AddDocenteComponent } from './components/gestionar-docentes/add-docente/add-docente.component';
+import { ActualizarDocenteComponent } from './components/gestionar-docentes/actualizar-docente/actualizar-docente.component';
+import { ViewCategoriaComponent } from './components/gestionar-categoria-curso/view-categoria/view-categoria.component';
+import { AddCategoriaComponent } from './components/gestionar-categoria-curso/add-categoria/add-categoria.component';
+import { ActualizarCategoriaComponent } from './components/gestionar-categoria-curso/actualizar-categoria/actualizar-categoria.component';
+import { ViewImagenesComponent } from './components/gestionar-imagenes/view-imagenes/view-imagenes.component';
+import { ViewTemarioComponent } from './components/gestionar-temario/view-temario/view-temario.component';
+import { AddTemarioComponent } from './components/gestionar-temario/add-temario/add-temario.component';
+import { ActualizarTemarioComponent } from './components/gestionar-temario/actualizar-temario/actualizar-temario.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { LoginComponent } from './components/login/login.component';
+import { LoginGuard } from './guards/login.guard';
+import { ViewModalidadComponent } from './components/gestion-modalidad/view-modalidad/view-modalidad.component';
+import { AddModalidadComponent } from './components/gestion-modalidad/add-modalidad/add-modalidad.component';
+import { ActualizarModalidadComponent } from './components/gestion-modalidad/actualizar-modalidad/actualizar-modalidad.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,16 +81,50 @@ import { DocentesComponent } from './components/docentes/docentes.component';
     EventosComponent,
     PublicacionesComponent,
     DocentesComponent,
+    ViewCursoComponent,
+    AddCursoComponent,
+    ActualizarCursoComponent,
+    CursoComponent,
+    ViewBlogComponent,
+    AddBlogComponent,
+    ActualizarBlogComponent,
+    BlogComponent,
+    ViewEventoComponent,
+    ActualizarEventoComponent,
+    AddEventoComponent,
+    ViewUsuarioComponent,
+    AddUsuarioComponent,
+    ActualizarUsuarioComponent,
+    ViewDocenteComponent,
+    AddDocenteComponent,
+    ActualizarDocenteComponent,
+    ViewCategoriaComponent,
+    AddCategoriaComponent,
+    ActualizarCategoriaComponent,
+    ViewImagenesComponent,
+    ViewTemarioComponent,
+    AddTemarioComponent,
+    ActualizarTemarioComponent,
+    DashboardComponent,
+    PerfilComponent,
+    SpinnerComponent,
+    LoginComponent,
+    ViewModalidadComponent,
+    AddModalidadComponent,
+    ActualizarModalidadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule,
+    SwiperModule
     
   ],
-  providers: [],
+  providers: [CourseService, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,29 @@
+<div class="actualizar-categoria-container">
+    <div class="header">
+        <div class="title">
+          <h3>Crear nueva Categoria</h3>
+        </div>
+      </div>
+
+      <form action="" (ngSubmit)="agregarCategoria()">
+       <mat-card>
+        <h3 class="title"> Ingresa Datos</h3>
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre de la Categoría</mat-label>
+            <input matInput placeholder="Ex. Tributaria" name="tituloCategoriaCurso" [(ngModel)]="categoria.tituloCategoriaCurso">
+          </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Descripción de la Categoría</mat-label>
+            <textarea rows="8" cols="50" matInput placeholder="Ex. La categoría Tributaria está referida a..."  name="descripcion" [(ngModel)]="categoria.descripcion"></textarea>
+          </mat-form-field>
+  
+          <mat-card-actions style="width:100%; margin-top:20px;">
+            <button type="submit" mat-raised-button color="primary">Crear categoría</button>
+        
+            <a routerLink="/dashboard/ver-categoria-curso" mat-raised-button  style="margin-left:30px; ">Cancelar</a>
+           </mat-card-actions>
+       </mat-card>
+      </form>
+
+  </div>

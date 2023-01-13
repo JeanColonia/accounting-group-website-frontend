@@ -36,16 +36,10 @@
     font-size: 60px;
     font-weight: bold;
     padding-bottom:10px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Source Sans Pro', serif;
 }
 
-.title h3, p{
-    font-size: 22px;
-    font-weight: bold;
-    font-family: 'Playfair Display', serif;
-    line-height:1.5;
-    letter-spacing:1.5px;
-}
+
 
 .title p{
     width:60%;
@@ -54,13 +48,6 @@
 }
 
 /*HISTORIA*/
-
-.historia, .mision, .vision{
-    width:75%;
-    margin: 0 auto;
-    
-}
-
 .info-title {
   width: 100%;
   height: 100%;
@@ -73,49 +60,100 @@
 }
 
 .info-title h3 {
-  font-size: 35px;
-  color: var(--negro);
-  font-family: "Playfair Display" ,"Rubik", sans-serif;
-  font-weight: 600;
-  letter-spacing: 4px;
-  line-height:2;
+    font-size: 45px;
+    color: var(--celeste);
+    font-weight: bold;
+    line-height: 1.1;
+    margin-top:10px;
 
 }
-.info-title p {
-  font-size: 16px;
-  color: var(--negro);
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  margin: 10px 0 10px 0;
-  line-height:1.5;
-  letter-spacing:2;
-  text-align: justify;
-}
 
-.linear {
-  display: flex;
-  flex-direction: row;
-  width: 20%;
-  height: 30px;
-  justify-content: center;
-  align-items: center;
-}
+/*************/
+.titulos{
+    font-size: 40px;
+    color: var(--celeste);
+    font-weight: bold;
+    line-height: 1.1;
+    margin-top:10px;
+  
+  }
+/******* educación ejecutiva *********/
+.ejecutiva{
+    width: 99.95%;
+    height: 450px;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top:100px;
+    height: 450px;
+    flex-wrap: wrap;
+    z-index:2;
+    
+  
+  }
+  .ejecutiva .ejecutiva-desc{
+    min-width: 180px;
+    max-width:500px;
+    margin-top:-50px;
+  
+  }
+  
+  .ejecutiva .ejecutiva-desc h3{
+    font-size: 40px;
+    color: var(--celeste);
+    font-weight: bold;
+    line-height: 1.1;
+    margin-top:10px;
+  
+  }
+  
+  .ejecutiva .ejecutiva-desc p{
+    font-size: 19px;
+    color: #202E44;
+    text-align: center;  
+    text-align:left;
+    width: 90%;
+    line-height: 1.1;
+    text-align: justify;
+    margin-top:10px;
+  
+  }
+  .ejecutiva .ejecutiva-img{
+    min-width: 180px;
+    max-width:600px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:-40px;
+  }
+  
+  .ejecutiva .ejecutiva-img img{
+    width: 80%;
+    height:450px;
+    object-fit: contain;
+  }
+  
+  .btn-ejecutiva{
+    height: 50px;
+    width: 120px;
+    background-color: var(--celeste);
+    border:none;
+    border-radius: 50px;
+    color: #fff;
+    margin-top:10px;
+    font-weight: bold;  
+  }
+  
+  .btn-ejecutiva:hover{
+  background-color: rgb(11, 117, 138);; 
+  }
 
-.linear .linear-element {
-  width: 20%;
-  height: 2px;
-  background: var(--negro);
-}
-.linear .educacion {
-  width: 20%;
-  height: 5px;
-  background: var(--blanco);
-}
-.linear .center {
-  width: 34%;
-  height: 5px;
-  background: var(--celeste);
-}
+  
 
 /*****CARDS***********/
 
@@ -125,16 +163,13 @@
     width: 90%;
     height:100%;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 80px;
+    text-align:center;
   
 }
-.confianza-title h1{
-font-size: 30px;
-color: #1d1c22;
-text-align: center;
-font-weight: bold;
-font-family: "Playfair Display" ,"Rubik", sans-serif;
-margin-bottom:55px;
+.confianza-title{
+    margin-bottom:20px;
+    margin-top:-0px;
 }
 
 .cards{
@@ -143,9 +178,10 @@ margin-bottom:55px;
     width: 100%;
     height: 100%;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
   
 }
+/* 
 .card{
 width: 28%;
 height: 380px;
@@ -189,24 +225,9 @@ box-shadow: -1px 0px 5px 2px rgba(194,194,194,0.67);
     padding: 0px 40px;
     text-align: justify;
 }
-
+ */
 
 /*CARDS HOVER**/
-.card:hover{
-    background-color: #1095AF;
-    width: 31%;
-height: 385px;
-}
-.card:hover mat-icon{
-    color: #fff;
-}
-.card:hover p{
-    color: #fff;
-}
-.card:hover h3{
-    color: #fff;
-    font-size: 23px;
-}
 
 
 /** NUESTRO EQUIPO**/
@@ -220,25 +241,11 @@ height: 385px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--celeste);
     margin-bottom: 40px;
-    margin-top: 100px;
+    margin-top:120px;
   }
   
-  .title-cursos-container .team-title {
-    font-size: 35px;
-    color: var(--blanco);
-    padding-top: 12px;
-    text-transform: uppercase;
-    font-family: "Playfair Display" ,"Rubik", sans-serif;
-    font-weight: 500;
-    width: 35%;
-    text-align: center;
-    line-height: 1.5;
-    letter-spacing: 2px;
-    padding-top:40px;
-  }
-  
+ 
  
 
 /** NUESTRO EQUIPO - CARDS***/
@@ -272,7 +279,7 @@ height: 385px;
   }
 
 .card-item .card-head h3{
-    font-size: 20px;
+    font-size: 18px;
     text-transform: none;
     padding: 3px 7px;
     text-align: center;
@@ -280,8 +287,8 @@ height: 385px;
 }
 
 .card-item .card-head img{
-    width: 125px;
-    height: 125px;
+    width: 95px;
+    height: 95px;
     margin: 0 auto;
     border-radius: 50% 50%;
     
@@ -305,8 +312,6 @@ height: 385px;
     font-family: sans-serif;
     font-weight: normal;
     text-align: start;
-
-
 }
 
 
@@ -323,3 +328,96 @@ height: 385px;
     border-radius: 8px 0 0 8px;
    
 }
+
+
+
+.cursos-container{
+    background-color: var(--celeste);
+width: 99.95%;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    padding-left:100px;
+  padding-right:100px;
+  height: 450px;
+  flex-wrap: wrap;
+  margin-top: -150px;
+ 
+  }
+  
+  .cursos-container .ejecutiva-desc {
+    margin-top:-100px;
+    padding-left:30px;
+    min-width: 180px;
+    max-width:550px;
+
+  }
+  .cursos-container .ejecutiva-img{
+    min-width: 180px;
+    max-width:550px;
+    z-index: 2;
+  }
+  
+  .cursos-container .ejecutiva-desc h3{
+    color: #fff;
+  }
+  .cursos-container .ejecutiva-desc p{
+    color: #fff;
+  }
+  .cursos-container .ejecutiva-desc button{
+    background-color: #fff;
+    color: var(--celeste);
+  }
+  
+  .cursos-container .ejecutiva-desc button:hover{
+    background-color: rgb(211, 211, 211);
+    font-weight: bold;
+  
+  }
+
+
+  .cards mat-accordion, mat-expansion-panel{
+    width: 250px;
+    text-align: justify;
+  }
+  .cards mat-expansion-panel-header{
+    width: 250;
+    height: 120px;
+  }
+  mat-accordion mat-panel-title p  {
+    color:var(--negro);
+    font-weight: 500;
+    font-size: 15px;
+
+
+  }
+
+  mat-accordion:hover mat-panel-title p  {
+    color:var(--celeste);
+    font-weight: bold;
+
+  }
+
+  mat-accordion:focus mat-panel-title p  {
+    color:var(--celeste);
+  }
+  .icon-home{
+    width: 40px;
+    height:40px;
+    background-color: rgb(16, 149, 175);
+    color: #fff;
+    border-radius: 50%;
+    margin-right:10px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+  }
+  .icon-home mat-icon{
+    font-size: 25px;
+    margin:0;
+    padding:0;
+  }

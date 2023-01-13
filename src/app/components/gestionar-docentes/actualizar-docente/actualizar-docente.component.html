@@ -1,0 +1,101 @@
+<div class="add-user-container">
+  <div class="header">
+    <div class="title">
+      <h3>Actualizar Datos del Docente</h3>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <form class="form-datos" (ngSubmit)="actualizarDocente()">
+      <mat-form-field appearance="outline">
+        <mat-label>Nombres</mat-label>
+        <input matInput name="nombres" [(ngModel)]="docente.nombres" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Apellidos</mat-label>
+        <input matInput name="apellidos" [(ngModel)]="docente.apellidos" />
+      </mat-form-field>
+
+      <mat-form-field class="textarea example-full-width" appearance="outline">
+        <mat-label>Descripción del Docente</mat-label>
+        <textarea
+          rows="8"
+          cols="50"
+          matInput
+          placeholder="Ex. El profesional es especialista en el área contable..."
+          name="descripcion"
+          [(ngModel)]="docente.descripcion"
+        ></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Dirección/Pais</mat-label>
+        <input matInput name="pais" [(ngModel)]="docente.pais" />
+      </mat-form-field>
+
+      <mat-card-actions style="width: 100%; margin-top: 35px">
+        <button type="submit" mat-raised-button color="primary">
+          Actualizar docente
+        </button>
+
+        <a
+          routerLink="/dashboard/ver-docentes"
+          mat-raised-button
+          style="margin-left: 30px"
+          >Cancelar</a
+        >
+      </mat-card-actions>
+    </form>
+
+    <form
+      (ngSubmit)="onUpload()"
+      novalidate
+      class="form-imagen"
+      enctype="multipart/form-data"
+    >
+      Agregar Imagen:
+
+      <input
+        #imagenInputFile
+        id="imagen"
+        type="file"
+        accept="image/png, image/jpeg,image/jpg, image/tiff"
+        (change)="onFileChange($event)"
+      />
+
+      <div
+        *ngIf="docente.fotografia"
+        style="margin-top: 20px; width: 100%"
+      >
+        <h5>Vista Previa:</h5>
+        <img
+          class="image-thumbnail"
+          style="max-width: 100px"
+          [src]="docente.fotografia"
+          alt=""
+        />
+      </div>
+
+      <mat-card-actions style="margin-top: 50px; width: 100%">
+        <button
+          style="margin-right: 25px"
+          type="submit"
+          mat-raised-button
+          color="primary"
+          [disabled]="!imagen"
+        >
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+        </button>
+        <button
+          type="submit"
+          mat-raised-button
+          color="info"
+          [disabled]="!imagen"
+          (click)="reset()"
+        >
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+      </mat-card-actions>
+    </form>
+  </div>
+</div>

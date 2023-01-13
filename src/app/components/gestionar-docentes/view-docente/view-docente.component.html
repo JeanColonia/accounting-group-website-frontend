@@ -1,0 +1,57 @@
+<div class="view-user-container">
+    <div class="header">
+      <a mat-raised-button routerLink="/dashboard/agregar-docente"
+        >Crear Nuevo Docente</a
+      >
+      <div class="title">
+        <h3>Listado de Docentes</h3>
+      </div>
+    </div>
+    <mat-card class="card" *ngFor="let docente of listaDocentes">
+      <ng-container>
+        <div class="card-img" *ngIf="docente.fotografia; else SinImagen">
+          <img [src]="docente.fotografia" />
+        </div>
+      </ng-container>
+      <ng-template #SinImagen>
+        <div class="card-img">
+          <img src="../../../../assets/usuario-desconocido.png" />
+        </div>
+      </ng-template>
+  
+      <div class="card-content">
+        <mat-card-title style="font-size: 13.5px; margin-top: -4px">
+          <mat-card-subtitle style="font-size: 14px"> Docente </mat-card-subtitle>
+  
+          {{ docente.nombres }} {{ docente.apellidos }}
+        </mat-card-title>
+  
+        <mat-card-title style="font-size: 13.5px; margin-top: -4px">
+          <mat-card-subtitle style="font-size: 14px"> Descripción: </mat-card-subtitle>
+          <p>{{ docente.descripcion}}</p>
+        </mat-card-title>
+  
+        <mat-card-title style="font-size: 13.5px">
+          <mat-card-subtitle style="font-size: 14px">
+            Pais
+          </mat-card-subtitle>
+  
+          {{ docente.pais }}
+        </mat-card-title>
+  
+       
+      </div>
+  
+      <div class="card-actions">
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="actualizarDocente(docente.id)">
+            <i class="fa-solid fa-pen"></i>
+          </button> 
+          <button mat-raised-button color="warn" (click)="eliminarDocente(docente.id)">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </mat-card-actions>
+      </div>
+    </mat-card>
+  </div>
+  

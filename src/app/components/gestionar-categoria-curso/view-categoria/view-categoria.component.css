@@ -1,0 +1,90 @@
+.perfil-container{
+    width: 82vw;
+    height: 100%;
+    margin-top:25px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    height: 100px;
+}
+
+.header a {
+    width: 160px;
+    position: absolute;
+    right: 20px;
+    margin-top: 35px;
+    background-color: rgb(16, 149, 175);
+    color: #fff;
+}
+
+
+
+.header .title {
+    text-align: center;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+.title h3 {
+    font-family: 'Source Sans Pro', 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(16, 149, 175);
+}
+
+
+mat-card{
+    width: 80%;      
+    margin: 10px auto;
+    height: 60px;
+    color:#000;
+    
+}
+
+.card-main{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: 'Source Sans Pro', 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.card-main .title, .description{
+display:flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;    
+
+}
+
+.card-main .title{
+    width: 9%;
+    border-right: 1px solid rgb(199, 199, 199);
+
+    }
+    
+    
+    
+.card-main .description{
+    width:60%;
+    margin-left:10px;
+    text-overflow: ellipsis ;
+    font-size: 13px;
+
+    }
+    
+.card-actions{
+    margin-top:-10px;
+}

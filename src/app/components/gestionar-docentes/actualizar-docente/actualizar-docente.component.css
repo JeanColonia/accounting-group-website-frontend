@@ -1,0 +1,86 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.add-user-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+}
+
+
+.header .title {
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.title h3 {
+    font-family: 'Source Sans Pro', 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(16, 149, 175);
+}
+
+
+.form-container{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    margin-top:-200px;
+}
+
+.form-datos{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left:100px;
+
+}
+.form-datos mat-form-field{
+    width: 300px;
+    margin-right: 10px;
+
+    
+}
+
+.form-datos mat-select{
+    width: 100%;        
+
+}
+.form-datos .textarea {
+    width: 85%;
+}
+
+
+.form-imagen{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100px;
+    margin-top: 15px;
+    font-weight: bold;
+
+}

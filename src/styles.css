@@ -3,19 +3,15 @@
 @import '~swiper/swiper-bundle';
 
 
-html{
-  scrollbar-width: thin;
-  scrollbar-color: #1095AF rgba(146, 146, 146, 0.596) ;
-  
-}
+
 html, body { height: 100%; 
 margin:0; padding:0;
 box-sizing: border-box;
 
 
   }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: rgb(243, 242, 242);
+body { margin: 0; font-family: 'Source Sans Pro', 'Roboto', "Helvetica Neue", sans-serif;
+  background-color: rgb(250, 250, 250);
  }
 
  .fixed{
@@ -32,26 +28,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
   top:-55px;
 }
 
-
-
+/* Style the scrollbar background */
 ::-webkit-scrollbar {
-
-  width: 8px;     /* Tamaño del scroll en vertical */
-
-  height: 8px;    /* Tamaño del scroll en horizontal */
-
-
+  background: rgb(255, 255, 255);
+  width:8px;
 }
 
-
-.info-title h3 {
-  font-size: 35px;
-  color: var(--negro);
-  font-family: "Playfair Display" , sans-serif;
-  font-weight: 600;
-  letter-spacing: 4px;
-  line-height:2;
-  text-transform: uppercase;
-
+/* Style the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background:var(--celeste);
+  border-radius: 5px;
+  border:none;
 }
+
 

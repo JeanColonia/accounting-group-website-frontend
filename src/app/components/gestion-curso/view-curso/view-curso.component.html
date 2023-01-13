@@ -1,0 +1,42 @@
+<div class="view-curso-container">
+  <div class="header">
+    <a mat-raised-button routerLink="/dashboard/agregar-curso">Crear Nuevo Curso</a>
+    <div class="title">
+      <h3>Listado de Cursos</h3>
+    </div>
+  </div>
+  <mat-card class="card" *ngFor="let curso of listaCursos"> 
+    <div class="card-img">
+      <img src="../../../../assets/cursos/ejemplo-img-curso.png" />
+    </div>
+    <div class="card-content">
+      <mat-card-title >
+        {{ curso.titulo }}
+      </mat-card-title>
+
+      <mat-card-subtitle>
+        Docente: {{ curso.docente.nombres }} {{ curso.docente.apellidos }}
+      </mat-card-subtitle>
+      <mat-card-subtitle
+          >
+        Categoría: {{ curso.categoriacurso.tituloCategoriaCurso }}, fecha:
+        {{ curso.fecha }} , modalidad: {{ curso.modalidad.nombre }}, Horario:
+        {{ curso.horaInicio }} - {{ curso.horaFin }}
+      </mat-card-subtitle>
+    </div>
+
+    <div class="card-actions">
+      <mat-card-actions>
+        <button mat-raised-button  (click)="RutaActualizarCurso()">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </button>
+        <button mat-raised-button color="primary" (click)="RutaActualizarCurso()">
+          <i class="fa-solid fa-pen"></i>
+        </button>
+        <button mat-raised-button color="warn" (click)="EliminarCurso()">
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </mat-card-actions>
+    </div>
+  </mat-card>
+</div>

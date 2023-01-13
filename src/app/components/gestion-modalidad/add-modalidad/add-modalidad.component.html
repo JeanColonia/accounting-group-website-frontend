@@ -1,0 +1,29 @@
+<div class="actualizar-categoria-container">
+    <div class="header">
+        <div class="title">
+          <h3>Crear nueva Modalidad</h3>
+        </div>
+      </div>
+
+      <form action="" (ngSubmit)="agregarModalidad()">
+       <mat-card>
+        <h3 class="title"> Ingresa Datos</h3>
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre de la Modalidad</mat-label>
+            <input matInput placeholder="Ex. Virtual" name="tituloCategoriaCurso" [(ngModel)]="modalidad.nombre">
+          </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Descripción de la Modalidad</mat-label>
+            <textarea rows="8" cols="50" matInput placeholder="Ex. La modalidad virtual está referida a..."  name="descripcion" [(ngModel)]="modalidad.descripcion"></textarea>
+          </mat-form-field>
+  
+          <mat-card-actions style="width:100%; margin-top:20px;">
+            <button type="submit" mat-raised-button color="primary">Crear categoría</button>
+        
+            <a routerLink="/dashboard/ver-modalidades" mat-raised-button  style="margin-left:30px; ">Cancelar</a>
+           </mat-card-actions>
+       </mat-card>
+      </form>
+
+  </div>
