@@ -5,7 +5,7 @@ import { Course } from '../models/Course';
   providedIn: 'root'
 })
 export class CourseService {
-
+  BASE_URL:string = 'https://grupo-contable-backend-app.herokuapp.com';
 
  
 

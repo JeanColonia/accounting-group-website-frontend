@@ -1,1 +1,26 @@
-<p>actualizar-temario works!</p>
+<div class="actualizar-categoria-container">
+    <div class="header">
+        <div class="title">
+          <h3>Actualizar Temario</h3>
+        </div>
+      </div>
+
+      <form action="" (ngSubmit)="actualizarTemario()">
+       <mat-card>
+        <h3 class="title"> Ingresa datos</h3>
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre del Temario</mat-label>
+            <input matInput placeholder="Ex. Introducción al T-Registro y PLAME" name="titulo" [(ngModel)]="temario.titulo">
+          </mat-form-field>
+
+
+          <angular-editor style="margin-top:20px; " [placeholder]="'Ingrese la descripción del temario...'" name="descripcionTemario" [(ngModel)]="temario.descripcionTemario"></angular-editor>
+          <mat-card-actions style="width:100%; margin-top:20px;">
+            <button type="submit" mat-raised-button color="primary">Actualizar Temario</button>
+        
+            <a (click)="Cancelar()" mat-raised-button  style="margin-left:30px; ">Cancelar</a>
+           </mat-card-actions>
+       </mat-card>
+      </form>
+
+  </div>

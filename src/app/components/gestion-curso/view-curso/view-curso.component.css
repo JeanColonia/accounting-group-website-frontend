@@ -68,12 +68,18 @@
     height: 80px;
     object-fit:contain;
 }
-.card-content{
-    width: 65%;
+
+.card-content  {
+    width: 58%;
+
+}
+
+.card-content mat-card-subtitle p {
+    width: 90%;
     white-space: nowrap;
-    text-overflow: hidden;
-    overflow-x: hidden;
- 
+    text-overflow: ellipsis;
+    overflow: hidden;
+
 
 
 }

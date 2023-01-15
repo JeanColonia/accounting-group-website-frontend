@@ -1,0 +1,119 @@
+.perfil-container{
+    width: 82vw;
+    height: 100%;
+    margin-top:25px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    height: 100px;
+    margin-bottom:50px;
+    
+}
+
+.header a {
+    width: 160px;
+    position: absolute;
+    right: 20px;
+    margin-top: 10px;
+    background-color: rgb(16, 149, 175);
+    color: #fff;
+}
+
+
+
+.header .title {
+    text-align: center;
+    width: 80%;
+    padding-top: 70px;
+    margin: 0 auto; 
+}
+
+.title h3 {
+    font-family: 'Source Sans Pro', 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    color: rgb(50, 51, 51);
+}
+
+
+mat-card{
+    width: 80%;      
+    margin: 10px auto;
+    color:#000;
+    
+}
+
+.card-main{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: 'Source Sans Pro', 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.card-main .title, .description{
+display:flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;    
+
+}
+
+.card-main .title{
+    width: 100%;
+    margin:0;
+    padding-bottom:10px;
+    font-weight: bold;
+    
+    }
+    
+    
+    
+.card-main .description{
+    width:100%;
+    text-overflow: ellipsis ;
+    font-size: 14px;
+
+    }
+    
+.card-actions{
+    margin-top:-10px;
+}
+
+
+.sin-temario{
+    width:82vw;
+    height:600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sin-temario h3{
+
+    font-size: 20px;
+    font-family: 'Source Sans Pro','Roboto', sans-serif;
+    font-weight: bold;
+}
+
+
+
+.sin-temario img{
+
+    width:200px;
+    height:200px;
+    margin-bottom:20px;
+}
+

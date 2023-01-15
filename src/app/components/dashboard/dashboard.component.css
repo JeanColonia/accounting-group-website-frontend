@@ -4127,7 +4127,7 @@
     margin-bottom: 0;
     list-style: none;
     background-color: rgb(16,149,175);
-    height: 100%;
+    min-height: 100%;
   }
   
   .navbar-nav .nav-link {

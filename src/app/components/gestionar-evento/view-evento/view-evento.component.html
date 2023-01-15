@@ -1,1 +1,54 @@
-<p>view-evento works!</p>
+<div class="view-curso-container">
+    <div class="header">
+      <a mat-raised-button routerLink="/dashboard/agregar-evento"
+        >Crear Evento</a
+      >
+      <div class="title">
+        <h3>Listado de Eventos</h3>
+      </div>
+    </div>
+    <mat-card class="card" *ngFor="let evento of listaEventos">
+      <div class="card-img">
+        <img [src]="evento.fotografia" />
+      </div>
+      <div class="card-content">
+        <mat-card-title>
+          {{ evento.titulo }}
+        </mat-card-title>
+  
+        <mat-card-subtitle>
+            Fecha: {{evento.fecha}}, Modalidad: {{evento.modalidad_evento.nombre}}
+        </mat-card-subtitle>
+        <mat-card-subtitle>
+        <p> Creado por: {{evento.usuario.apellidos }} {{evento.usuario.nombres }}  
+        </p>
+        </mat-card-subtitle>
+      </div>
+  
+      <div class="card-actions">
+        <mat-card-actions>
+
+ 
+          <button
+            matTooltip="Actualizar evento"
+            [matTooltipPosition]="positionOptions[0]"
+            matTooltipHideDelay="50"
+            mat-raised-button
+            color="primary" (click)="actualizarEvento(evento.idEvento)"
+          >
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button
+            matTooltip="Eliminar evento"
+            [matTooltipPosition]="positionOptions[0]"
+            mat-raised-button
+            color="warn"
+            (click)="eliminarEvento(evento.idEvento)"
+          >
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </mat-card-actions>
+      </div>
+    </mat-card>
+  </div>
+  

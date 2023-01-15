@@ -1,1 +1,55 @@
-<p>view-blog works!</p>
+<div class="view-curso-container">
+    <div class="header">
+      <a mat-raised-button routerLink="/dashboard/agregar-blog"
+        >Crear Blog</a
+      >
+      <div class="title">
+        <h3>Listado de Blogs</h3>
+      </div>
+    </div>
+    <mat-card class="card" *ngFor="let blog of listadoBlogs">
+      <div class="card-img">
+        <img [src]="blog.imagen" />
+      </div>
+      <div class="card-content">
+        <mat-card-title>
+          {{ blog.titulo }}
+        </mat-card-title>
+  
+        <mat-card-subtitle>
+            Fecha: {{blog.fecha}}, Tipo de Publicación: {{blog.tipoPublicacion}}
+        </mat-card-subtitle>
+        <mat-card-subtitle>
+        <p> Creado por: {{blog.usuario.apellidos }} {{blog.usuario.nombres }}  
+        </p>
+        </mat-card-subtitle>
+      </div>
+  
+      <div class="card-actions">
+        <mat-card-actions>
+
+ 
+          <button
+            matTooltip="Actualizar blog"
+            [matTooltipPosition]="positionOptions[0]"
+            matTooltipHideDelay="50"
+            mat-raised-button
+            color="primary" 
+            (click)="actualizarBlog(blog.idBlog)"
+          >
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button
+            matTooltip="Eliminar evento"
+            [matTooltipPosition]="positionOptions[0]"
+            mat-raised-button
+            color="warn"
+           (click)="eliminarBlog(blog.idBlog)"
+          >
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </mat-card-actions>
+      </div>
+    </mat-card>
+  </div>
+  

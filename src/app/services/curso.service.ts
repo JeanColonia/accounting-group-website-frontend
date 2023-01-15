@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 })
 export class CursoService {
 
-  BASE_URL:string = 'http://localhost:8080';
+  BASE_URL:string = 'https://grupo-contable-backend-app.herokuapp.com';
   constructor(private http:HttpClient) { }
 
 
@@ -20,12 +20,12 @@ export class CursoService {
   }
 
   actualizarCurso(curso:any){
-    return this.http.post(`${this.BASE_URL}/curso/api/`, curso);
+    return this.http.put(`${this.BASE_URL}/curso/api/`, curso);
   }
 
 
   crearCurso(curso:any){
-    return this.http.put(`${this.BASE_URL}/curso/api/`, curso);
+    return this.http.post(`${this.BASE_URL}/curso/api/`, curso);
   }
 
   eliminarCurso(id:number){

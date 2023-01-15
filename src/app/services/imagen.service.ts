@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ImagenService {
-  BASE_URL:string = 'http://localhost:8080';
+  BASE_URL:string = 'https://grupo-contable-backend-app.herokuapp.com';
   constructor(private http:HttpClient) { }
 
 

@@ -1,9 +1,10 @@
-.add-curso-container{
+.add-user-container{
     width: 100%;
     height: 100%;
     margin-top:14px;
     display: flex;
     flex-direction: column;
+    margin-bottom:100px;
 }
 
 
@@ -16,4 +17,73 @@ width: 100%;
   color:rgb(16,149,175);
   padding-top:20px;
   padding-bottom:10px;
+}
+
+
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+}
+
+
+.header .title {
+  text-align: center;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.title h3 {
+  font-family: 'Source Sans Pro', 'Roboto', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(16, 149, 175);
+}
+
+
+.form-container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-between;
+
+}
+
+.form-datos{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left:15px;
+
+}
+.form-datos mat-form-field{
+  width: 100%;
+  margin-right: 10px;
+
+  
+}
+
+.form-datos mat-select{
+  width: 100%;        
+
+}
+
+
+.form-imagen{
+  width: 18%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 100px;
+  margin:15px 10px 0 15px;
+  font-weight: bold;
+
 }

@@ -63,7 +63,7 @@ import { LoginGuard } from './guards/login.guard';
 import { ViewModalidadComponent } from './components/gestion-modalidad/view-modalidad/view-modalidad.component';
 import { AddModalidadComponent } from './components/gestion-modalidad/add-modalidad/add-modalidad.component';
 import { ActualizarModalidadComponent } from './components/gestion-modalidad/actualizar-modalidad/actualizar-modalidad.component';
-
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 @NgModule({
   declarations: [
@@ -121,7 +121,8 @@ import { ActualizarModalidadComponent } from './components/gestion-modalidad/act
     NgbModule,
     FormsModule,
     HttpClientModule,
-    SwiperModule
+    SwiperModule,
+    AngularEditorModule
     
   ],
   providers: [CourseService, LoginGuard],

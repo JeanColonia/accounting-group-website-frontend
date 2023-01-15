@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 })
 export class ModalidadService {
 
-  BASE_URL:string = 'http://localhost:8080';
+  BASE_URL:string = 'https://grupo-contable-backend-app.herokuapp.com';
 
   constructor(private http:HttpClient) { }
 

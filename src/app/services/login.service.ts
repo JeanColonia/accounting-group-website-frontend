@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class LoginService {
-
+  BASE_URL:string = 'https://grupo-contable-backend-app.herokuapp.com';
   constructor() { }
 
 

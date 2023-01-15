@@ -1,1 +1,59 @@
-<p>view-temario works!</p>
+<div class="perfil-container" *ngIf="sinTemario; else SinTemario">
+
+    <div class="header">
+      <a mat-raised-button (click)="agregarTemario()"
+        >Agregar Temario</a
+      >
+      <div class="title">
+        <h3>Temario de {{tituloCurso}}</h3>
+        <mat-divider></mat-divider>
+      </div>
+
+    </div>
+    
+<mat-card *ngFor="let temario of temarioCurso">
+  <div class="card-main">
+<div class="desc-body">
+<div class="title">
+{{ temario.titulo }}
+
+</div>
+<div class="description" >
+
+<p [innerHTML]="temario.descripcionTemario"></p>
+</div>
+</div>
+    <div class="card-actions">
+      <mat-card-actions>
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="actualizarTemario(temario.idTemario)"
+         
+        >
+          <i class="fa-solid fa-pen"></i>
+        </button>
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="deleteTemario(temario.idTemario)"
+    
+        >
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </mat-card-actions>
+    </div>
+  </div>
+
+</mat-card>
+
+  </div>
+  <ng-template #SinTemario>
+    <div class="sin-temario">
+      <h3> Aún no se ha registrado ningun temario</h3>
+      <img src="../../../../assets/sintemario.png" alt="">
+      <a mat-raised-button (click)="agregarTemario()"
+      >Agregar Temario</a
+    >
+    </div>
+  </ng-template>

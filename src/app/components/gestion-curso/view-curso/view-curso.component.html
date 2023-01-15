@@ -1,39 +1,71 @@
 <div class="view-curso-container">
   <div class="header">
-    <a mat-raised-button routerLink="/dashboard/agregar-curso">Crear Nuevo Curso</a>
+    <a mat-raised-button routerLink="/dashboard/agregar-curso"
+      >Crear Nuevo Curso</a
+    >
     <div class="title">
       <h3>Listado de Cursos</h3>
     </div>
   </div>
-  <mat-card class="card" *ngFor="let curso of listaCursos"> 
+  <mat-card class="card" *ngFor="let curso of listaCursos">
     <div class="card-img">
-      <img src="../../../../assets/cursos/ejemplo-img-curso.png" />
+      <img [src]="curso.imagen" />
     </div>
     <div class="card-content">
-      <mat-card-title >
+      <mat-card-title>
         {{ curso.titulo }}
       </mat-card-title>
 
       <mat-card-subtitle>
         Docente: {{ curso.docente.nombres }} {{ curso.docente.apellidos }}
       </mat-card-subtitle>
-      <mat-card-subtitle
-          >
-        Categoría: {{ curso.categoriacurso.tituloCategoriaCurso }}, fecha:
+      <mat-card-subtitle>
+      <p>  Categoría: {{ curso.categoriacurso.tituloCategoriaCurso }}, fecha:
         {{ curso.fecha }} , modalidad: {{ curso.modalidad.nombre }}, Horario:
-        {{ curso.horaInicio }} - {{ curso.horaFin }}
+        {{ curso.horaInicio }} - {{ curso.horaFin }}</p>
       </mat-card-subtitle>
     </div>
 
     <div class="card-actions">
       <mat-card-actions>
-        <button mat-raised-button  (click)="RutaActualizarCurso()">
+
+        <button
+        matTooltip="Ver temario"
+        [matTooltipPosition]="positionOptions[0]"
+        matTooltipHideDelay="50"
+        mat-raised-button style="background-color:rgb(14,146,172); color:#fff;"
+        (click)="RutaTemario(curso.idCurso)"
+      >
+      <i class="fa-solid fa-folder-tree"></i>
+      </button>
+
+        <a
+          mat-raised-button
+          matTooltip="Ver en GC Business"
+          *ngIf="curso.linkCarrito"
+          [matTooltipPosition]="positionOptions[0]"
+          [href]="curso.linkCarrito"
+          target="_blank"
+          alt="Link en GC Business "
+        >
           <i class="fa-solid fa-cart-shopping"></i>
-        </button>
-        <button mat-raised-button color="primary" (click)="RutaActualizarCurso()">
+        </a>
+        <button
+          matTooltip="Actualizar Curso"
+          [matTooltipPosition]="positionOptions[0]"
+          matTooltipHideDelay="50"
+          mat-raised-button
+          color="primary" (click)="actualizarElCurso(curso.idCurso)"
+        >
           <i class="fa-solid fa-pen"></i>
         </button>
-        <button mat-raised-button color="warn" (click)="EliminarCurso()">
+        <button
+          matTooltip="Eliminar curso"
+          [matTooltipPosition]="positionOptions[0]"
+          mat-raised-button
+          color="warn"
+          (click)="EliminarCurso(curso.idCurso)"
+        >
           <i class="fa-solid fa-trash"></i>
         </button>
       </mat-card-actions>

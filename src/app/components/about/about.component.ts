@@ -7,6 +7,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class AboutComponent implements OnInit {
 
+
   constructor( private route: ActivatedRoute) { 
     
   }

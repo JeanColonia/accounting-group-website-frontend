@@ -31,6 +31,9 @@ import { LoginGuard } from './guards/login.guard';
 import { ViewModalidadComponent } from './components/gestion-modalidad/view-modalidad/view-modalidad.component';
 import { AddModalidadComponent } from './components/gestion-modalidad/add-modalidad/add-modalidad.component';
 import { ActualizarModalidadComponent } from './components/gestion-modalidad/actualizar-modalidad/actualizar-modalidad.component';
+import { ViewTemarioComponent } from './components/gestionar-temario/view-temario/view-temario.component';
+import { AddTemarioComponent } from './components/gestionar-temario/add-temario/add-temario.component';
+import { ActualizarTemarioComponent } from './components/gestionar-temario/actualizar-temario/actualizar-temario.component';
 const routes: Routes = [
   {
     path: 'nosotros',
@@ -52,6 +55,7 @@ const routes: Routes = [
     path: 'eventos',
     component: EventosComponent,
   },
+  
   {
     path: '',
     component: InicioComponent,
@@ -96,6 +100,10 @@ const routes: Routes = [
       { path: 'ver-eventos', component: ViewEventoComponent },
       { path: 'agregar-evento', component: AddEventoComponent },
       { path: 'actualizar-evento/:idEvento', component: ActualizarEventoComponent },
+
+      { path: 'ver-temario/:idCurso', component: ViewTemarioComponent },
+      { path: 'agregar-temario/:idCurso', component: AddTemarioComponent },
+      { path: 'actualizar-temario/:idTemario', component: ActualizarTemarioComponent },
       { path: '', component: PerfilComponent }
     ],
   },
