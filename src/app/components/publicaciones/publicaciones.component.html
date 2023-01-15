@@ -1,4 +1,94 @@
-<p>publicaciones works!</p>
+<div class="eventos-container">
+    <div class="banner" >
+        <h1 data-aos="fade-left" data-aos-duration="1500">Publicaciones</h1>
+    </div>
 
+    <div class="ejecutiva">
+        <div class="ejecutiva-desc">
+          <h3 data-aos="fade-up" data-aos-duration="800">
+            Blogs actualizados
+          </h3>
+          <p data-aos="fade-up" data-aos-duration="1000">
+            Publicaciones realizadas por nuestros mejores profesionales.
+          </p>
+        </div>
+        <div class="ejecutiva-img">
+          <img
+            data-aos="fade-zoom-in"
+            data-aos-duration="1500"
+            src="../../../assets/home/home3.png"
+            alt=""
+          />
+        </div>
+      </div>
 
+      <div class="eventos-list">
+        <mat-card>
+          <div class="evento"  *ngFor="let blog of listadoBlog">
+            <div class="fecha">
+              <h6>FECHA</h6>
+              <span>  {{blog.fecha}}</span>
+              <img [src]="blog.imagen" alt="">
+            </div>
+            <div class="descripcion">
+                <h3>{{blog.titulo}}</h3>
+                <span>{{blog.tipoPublicacion}}</span>
+                <p [innerHTML]="blog.descripcion"></p>
+            </div>
+            <div class="mas">
+            <button mat-raised-button color="primary">Leer más</button>
+            </div>
+        </div>
+        </mat-card>
+      </div>
+
+    <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(16, 149, 175, 1)" offset="0%"></stop><stop stop-color="rgba(16, 149, 175, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,196L30,204.2C60,212,120,229,180,269.5C240,310,300,376,360,334.8C420,294,480,147,540,114.3C600,82,660,163,720,171.5C780,180,840,114,900,130.7C960,147,1020,245,1080,236.8C1140,229,1200,114,1260,57.2C1320,0,1380,0,1440,73.5C1500,147,1560,294,1620,334.8C1680,376,1740,310,1800,261.3C1860,212,1920,180,1980,212.3C2040,245,2100,343,2160,392C2220,441,2280,441,2340,424.7C2400,408,2460,376,2520,318.5C2580,261,2640,180,2700,179.7C2760,180,2820,261,2880,245C2940,229,3000,114,3060,130.7C3120,147,3180,294,3240,326.7C3300,359,3360,278,3420,236.8C3480,196,3540,196,3600,228.7C3660,261,3720,327,3780,294C3840,261,3900,131,3960,138.8C4020,147,4080,294,4140,351.2C4200,408,4260,376,4290,359.3L4320,343L4320,490L4290,490C4260,490,4200,490,4140,490C4080,490,4020,490,3960,490C3900,490,3840,490,3780,490C3720,490,3660,490,3600,490C3540,490,3480,490,3420,490C3360,490,3300,490,3240,490C3180,490,3120,490,3060,490C3000,490,2940,490,2880,490C2820,490,2760,490,2700,490C2640,490,2580,490,2520,490C2460,490,2400,490,2340,490C2280,490,2220,490,2160,490C2100,490,2040,490,1980,490C1920,490,1860,490,1800,490C1740,490,1680,490,1620,490C1560,490,1500,490,1440,490C1380,490,1320,490,1260,490C1200,490,1140,490,1080,490C1020,490,960,490,900,490C840,490,780,490,720,490C660,490,600,490,540,490C480,490,420,490,360,490C300,490,240,490,180,490C120,490,60,490,30,490L0,490Z"></path></svg>
+  
+    <div class="contacto-form ejecutiva">
+      <div class="ejecutiva-desc">
+        <h3 data-aos="fade-up" data-aos-duration="800">Contáctanos </h3>
+        
+        <div class="medios"></div>
+        <div data-aos="fade-up" data-aos-duration="1000">
+          <form action="">
+            <mat-form-field class="example-full-width">
+              <mat-label>Nombres</mat-label>
+              <input matInput />
+            </mat-form-field>
+  
+            <mat-form-field class="example-full-width">
+              <mat-label>Apellidos</mat-label>
+              <input matInput />
+            </mat-form-field>
+  
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Por ejemplo tunombre@gmail.com" />
+            </mat-form-field>
+  
+            <mat-form-field class="example-full-width">
+              <mat-label>Asunto</mat-label>
+              <textarea
+                matInput
+                placeholder="Por ejemplo Asunto Cotización Curso Laboral"
+              ></textarea>
+            </mat-form-field>
+          </form>
+          <button class="btn-ejecutiva" data-aos="fade-up" data-aos-duration="1500">
+            Enviar
+          </button>
+          
+        </div>
+    
+      </div>
+      <div class="ejecutiva-img">
+        <img
+          data-aos="fade-zoom-in"
+          data-aos-duration="1500"
+          src="../../../assets/home/home2.png"
+          alt=""
+        />
+      </div>
+    </div>
+</div>
 <app-footer></app-footer>

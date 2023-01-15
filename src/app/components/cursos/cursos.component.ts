@@ -1,28 +1,51 @@
-
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Course } from 'src/app/models/Course';
-import { CourseService } from 'src/app/services/course.service';
-import Swiper, { Autoplay} from 'swiper';
+import { CursoService } from 'src/app/services/curso.service';
+import Swiper, { Autoplay } from 'swiper';
 import SwiperCore, { SwiperOptions } from 'swiper';
-
 Swiper.use([Autoplay]);
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
-  styleUrls: ['./cursos.component.css']
+  styleUrls: ['./cursos.component.css'],
 })
 export class CursosComponent implements OnInit, AfterViewInit {
+  cursosContables:any[]=[];
+  cursosTributarios: any[] = [];
+  cursosLaborales: any[] = [];
+  ancho: number | undefined;
+  elementos: number | undefined;
 
-cursosContables: Course[]= [];
-cursosTributarios: Course[]= [];
-cursosLaborales: Course[]= [];
-ancho:number | undefined;
-elementos:number | undefined;
+  config: SwiperOptions = {
+    slidesPerView: 4.5,
+    spaceBetween: 50,
+    navigation: false,
+    pagination: { clickable: true },
+    scrollbar: { draggable: true },
+    autoplay: {
+      delay: 500,
+    },
+  };
 
-
-  constructor(private courseService:CourseService) { }
+  constructor(private cursoService: CursoService) {}
 
   ngOnInit(): void {
+    this.cursoService.listarCursos().subscribe(
+      data => {
+        console.log(data);
+        data.filter((curso:any)=>{
+          if(curso.categoriacurso.tituloCategoriaCurso=='Contable'){
+            this.cursosContables.push(curso);
+          }
+          else if(curso.categoriacurso.tituloCategoriaCurso=='Laboral'){
+            this.cursosLaborales.push(curso);
+          }
+          else if(curso.categoriacurso.tituloCategoriaCurso=='Tributario'){
+            this.cursosTributarios.push(curso);
+          }
+        })
+      }
+    );
     this.calcElements();
   }
 
@@ -30,15 +53,12 @@ elementos:number | undefined;
     console.log('slide change');
   }
 
-  
-
-  calcElements(){
+  calcElements() {
     this.ancho = document.body.clientWidth;
-    if(this.ancho<400){
-      this.elementos =1.2;
-    }
-    else{
-      this.elementos = 4.3
+    if (this.ancho < 400) {
+      this.elementos = 1.2;
+    } else {
+      this.elementos = 4.3;
     }
   }
 
@@ -46,12 +66,10 @@ elementos:number | undefined;
     const swiper = new Swiper('.swiper', {
       loop: true,
       autoplay: {
-        delay: 200,
+        delay: 50,
       },
-      slidesPerView:this.elementos,
-      spaceBetween:100
-   
+      slidesPerView: this.elementos,
+      spaceBetween: 100,
     });
- 
-}
+  }
 }

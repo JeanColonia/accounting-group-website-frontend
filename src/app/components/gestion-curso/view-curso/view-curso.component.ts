@@ -41,8 +41,8 @@ export class ViewCursoComponent implements OnInit {
 
  EliminarCurso(idCourse:number){
   swal.fire({
-    title:'Eliminar Usuario',
-    text:'¿Estás seguro de eliminar al usuario?',
+    title:'Eliminar Curso',
+    text:'¿Estás seguro de eliminar este curso?',
     icon:'warning',
     showCancelButton:true,
     confirmButtonText:'Eliminar',

@@ -132,10 +132,7 @@
     </mat-accordion>
   </div>
 
-  <div class="info-title">
-    <h3 data-aos="fade-up" data-aos-duration="1500">Cursos</h3>
-  </div>
-  <div class="body-container">
+   <div class="body-container">
     <h2 class="title-h2">Brindamos una amplia colección de cursos</h2>
     <p class="paragraph">
       Elige entre los cursos presenciales y virtuales que brindamos en cada mes.
@@ -161,30 +158,27 @@
               <a href="/">Explorar Contable</a>
             </div>
           </div>
-          <div class="swiper">
-            <div class="contable swiper-wrapper">
-              <a
-                class="course-card swiper-slide"
-                *ngFor="let contables of cursosContables"
-              >
-                <div class="course-img">
-                  <img [src]="contables.imagenLink" alt="" />
-                </div>
-                <div class="course-desc">
-                  <span class="title">{{ contables.nombre }}</span>
-                  <p class="docente">{{ contables.docente }}</p>
-                  <span class="categoria"
-                    >{{ contables.categoria }} -
-                    {{ contables.modalidad | uppercase }}</span
-                  >
-                  <p class="fecha">Inicio: {{ contables.inicio_clases }}</p>
-                  <p class="precio">
-                    {{ contables.inversion | currency : " PEN " }}
-                  </p>
-                </div>
-              </a>
+  
+         <swiper
+          [config]="config"
+          (slideChange)="onSlideChange()"
+        >
+          <ng-template swiperSlide *ngFor="let cursoContable of cursosContables">
+            <a class="course-card "
+          >
+            <div class="course-img">
+              <img [src]="cursoContable.imagen" alt="" />
             </div>
-          </div>
+            <div class="course-desc">
+              <span class="title">{{ cursoContable.titulo }}</span>
+              <p class="docente">{{ cursoContable.docente.apellidos }} {{cursoContable.docente.nombres}}</p>
+              <span class="categoria">{{ cursoContable.categoriacurso.tituloCategoriaCurso }}, Modalidad {{ cursoContable.modalidad.nombre}}</span>
+              <p class="fecha">Inicio: {{ cursoContable.fecha }}</p>
+            </div>
+          </a>
+          </ng-template>
+
+        </swiper>
         </mat-tab>
 
         <mat-tab>
@@ -205,27 +199,26 @@
               <a href="/">Explorar Tributario</a>
             </div>
           </div>
-          <div class="swiper">
-            <div class="tributarios swiper-wrapper">
-              <a
-                class="course-card swiper-slide"
-                *ngFor="let tributarios of cursosTributarios"
-              >
-                <div class="course-img">
-                  <img [src]="tributarios.imagenLink" alt="" />
-                </div>
-                <div class="course-desc">
-                  <span class="title">{{ tributarios.nombre }}</span>
-                  <p class="docente">{{ tributarios.docente }}</p>
-                  <span class="categoria">{{ tributarios.categoria }}</span>
-                  <p class="fecha">Inicio: {{ tributarios.inicio_clases }}</p>
-                  <p class="precio">
-                    {{ tributarios.inversion | currency : " PEN " }}
-                  </p>
-                </div>
-              </a>
+          <swiper
+          [config]="config"
+          (slideChange)="onSlideChange()"
+        >
+          <ng-template swiperSlide *ngFor="let cursoTributario of cursosTributarios">
+            <a class="course-card "
+          >
+            <div class="course-img">
+              <img [src]="cursoTributario.imagen" alt="" />
             </div>
-          </div>
+            <div class="course-desc">
+              <span class="title">{{ cursoTributario.titulo }}</span>
+              <p class="docente">{{ cursoTributario.docente.apellidos }} {{cursoTributario.docente.nombres}}</p>
+              <span class="categoria">{{ cursoTributario.categoriacurso.tituloCategoriaCurso }}, Modalidad {{ cursoTributario.modalidad.nombre}}</span>
+              <p class="fecha">Inicio: {{ cursoTributario.fecha }}</p>
+            </div>
+          </a>
+          </ng-template>
+
+        </swiper>
         </mat-tab>
 
         <mat-tab>
@@ -246,158 +239,77 @@
               <a href="/">Explorar Laboral</a>
             </div>
           </div>
-          <div class="swiper-container">
-            <div class="swiper-wrapper laborales">
-              <a class="swiper-slide course-card ">
-                <div class="course-img">
-                  <!-- <img [src]="laborales.imagenLink" alt=""> -->
-                  <img
-                    src="../../../assets/cursos/ejemplo-img-curso-2.png"
-                    alt=""
-                  />
-                </div>
-                <div class="course-desc">
-                  <span class="title">Curso Contable N° 01</span>
-                  <p class="docente">Jose Jose</p>
-                  <span class="categoria">Contable</span>
-                  <p class="fecha">Inicio: 10 Enero</p>
-                  <p class="precio">
-                    <!-- {{laborales.inversion | currency:' PEN '}} -->
-
-                    S/ 10.00
-                  </p>
-                </div>
-              </a>
-
-              <a class="course-card swiper-slide">
-                <div class="course-img">
-                  <!-- <img [src]="laborales.imagenLink" alt=""> -->
-                  <img
-                    src="../../../assets/cursos/ejemplo-img-curso-2.png"
-                    alt=""
-                  />
-                </div>
-                <div class="course-desc">
-                  <span class="title">DSADSAMDKSAMKDSMA</span>
-                  <p class="docente">Jose Jose</p>
-                  <span class="categoria">Contable</span>
-                  <p class="fecha">Inicio: 10 Enero</p>
-                  <p class="precio">
-                    <!-- {{laborales.inversion | currency:' PEN '}} -->
-
-                    S/ 10.00
-                  </p>
-                </div>
-              </a>
-
-              <a class="course-card swiper-slide">
-                <div class="course-img">
-                  <!-- <img [src]="laborales.imagenLink" alt=""> -->
-                  <img
-                    src="../../../assets/cursos/ejemplo-img-curso-2.png"
-                    alt=""
-                  />
-                </div>
-                <div class="course-desc">
-                  <span class="title">DSADSAMDKSAMKDSMA</span>
-                  <p class="docente">Jose Jose</p>
-                  <span class="categoria">Contable</span>
-                  <p class="fecha">Inicio: 10 Enero</p>
-                  <p class="precio">
-                    <!-- {{laborales.inversion | currency:' PEN '}} -->
-
-                    S/ 10.00
-                  </p>
-                </div>
-              </a>
-
-              <a class="course-card swiper-slide">
-                <div class="course-img">
-                  <!-- <img [src]="laborales.imagenLink" alt=""> -->
-                  <img
-                    src="../../../assets/cursos/ejemplo-img-curso-2.png"
-                    alt=""
-                  />
-                </div>
-                <div class="course-desc">
-                  <span class="title">DSADSAMDKSAMKDSMA</span>
-                  <p class="docente">Jose Jose</p>
-                  <span class="categoria">Contable</span>
-                  <p class="fecha">Inicio: 10 Enero</p>
-                  <p class="precio">
-                    <!-- {{laborales.inversion | currency:' PEN '}} -->
-
-                    S/ 10.00
-                  </p>
-                </div>
-              </a>
-
-              <a class="course-card swiper-slide">
-                <div class="course-img">
-                  <!-- <img [src]="laborales.imagenLink" alt=""> -->
-                  <img
-                    src="../../../assets/cursos/ejemplo-img-curso-2.png"
-                    alt=""
-                  />
-                </div>
-                <div class="course-desc">
-                  <span class="title">DSADSAMDKSAMKDSMA</span>
-                  <p class="docente">Jose Jose</p>
-                  <span class="categoria">Contable</span>
-                  <p class="fecha">Inicio: 10 Enero</p>
-                  <p class="precio">
-                    <!-- {{laborales.inversion | currency:' PEN '}} -->
-
-                    S/ 10.00
-                  </p>
-                </div>
-              </a>
-
-              <a class="course-card swiper-slide">
-                <div class="course-img">
-                  <!-- <img [src]="laborales.imagenLink" alt=""> -->
-                  <img
-                    src="../../../assets/cursos/ejemplo-img-curso-2.png"
-                    alt=""
-                  />
-                </div>
-                <div class="course-desc">
-                  <span class="title">DSADSAMDKSAMKDSMA</span>
-                  <p class="docente">Jose Jose</p>
-                  <span class="categoria">Contable</span>
-                  <p class="fecha">Inicio: 10 Enero</p>
-                  <p class="precio">
-                    <!-- {{laborales.inversion | currency:' PEN '}} -->
-
-                    S/ 10.00
-                  </p>
-                </div>
-              </a>
-
-              <a class="course-card swiper-slide">
-                <div class="course-img">
-                  <!-- <img [src]="laborales.imagenLink" alt=""> -->
-                  <img
-                    src="../../../assets/cursos/ejemplo-img-curso-2.png"
-                    alt=""
-                  />
-                </div>
-                <div class="course-desc">
-                  <span class="title">DSADSAMDKSAMKDSMA</span>
-                  <p class="docente">Jose Jose</p>
-                  <span class="categoria">Contable</span>
-                  <p class="fecha">Inicio: 10 Enero</p>
-                  <p class="precio">
-                    <!-- {{laborales.inversion | currency:' PEN '}} -->
-
-                    S/ 10.00
-                  </p>
-                </div>
-              </a>
+          <swiper
+          [config]="config"
+          (slideChange)="onSlideChange()"
+        >
+          <ng-template swiperSlide *ngFor="let cursosLaboral of cursosLaborales">
+            <a class="course-card "
+          >
+            <div class="course-img">
+              <img [src]="cursosLaboral.imagen" alt="" />
             </div>
-          </div>
+            <div class="course-desc">
+              <span class="title">{{ cursosLaboral.titulo }}</span>
+              <p class="docente">{{ cursosLaboral.docente.apellidos }} {{cursosLaboral.docente.nombres}}</p>
+              <span class="categoria">{{ cursosLaboral.categoriacurso.tituloCategoriaCurso }}, Modalidad {{ cursosLaboral.modalidad.nombre}}</span>
+              <p class="fecha">Inicio: {{ cursosLaboral.fecha }}</p>
+            </div>
+          </a>
+          </ng-template>
+
+        </swiper>
         </mat-tab>
       </mat-tab-group>
+    </div>
+  </div>
+
+  <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 210" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(16, 149, 175, 1)" offset="0%"></stop><stop stop-color="rgba(16, 149, 175, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,63L24,84C48,105,96,147,144,140C192,133,240,77,288,56C336,35,384,49,432,52.5C480,56,528,49,576,66.5C624,84,672,126,720,150.5C768,175,816,182,864,175C912,168,960,147,1008,122.5C1056,98,1104,70,1152,73.5C1200,77,1248,112,1296,115.5C1344,119,1392,91,1440,87.5C1488,84,1536,105,1584,101.5C1632,98,1680,70,1728,49C1776,28,1824,14,1872,10.5C1920,7,1968,14,2016,24.5C2064,35,2112,49,2160,49C2208,49,2256,35,2304,31.5C2352,28,2400,35,2448,31.5C2496,28,2544,14,2592,21C2640,28,2688,56,2736,87.5C2784,119,2832,154,2880,143.5C2928,133,2976,77,3024,45.5C3072,14,3120,7,3168,24.5C3216,42,3264,84,3312,112C3360,140,3408,154,3432,161L3456,168L3456,210L3432,210C3408,210,3360,210,3312,210C3264,210,3216,210,3168,210C3120,210,3072,210,3024,210C2976,210,2928,210,2880,210C2832,210,2784,210,2736,210C2688,210,2640,210,2592,210C2544,210,2496,210,2448,210C2400,210,2352,210,2304,210C2256,210,2208,210,2160,210C2112,210,2064,210,2016,210C1968,210,1920,210,1872,210C1824,210,1776,210,1728,210C1680,210,1632,210,1584,210C1536,210,1488,210,1440,210C1392,210,1344,210,1296,210C1248,210,1200,210,1152,210C1104,210,1056,210,1008,210C960,210,912,210,864,210C816,210,768,210,720,210C672,210,624,210,576,210C528,210,480,210,432,210C384,210,336,210,288,210C240,210,192,210,144,210C96,210,48,210,24,210L0,210Z"></path></svg>
+  
+  <div class="contacto-form ejecutiva">
+    <div class="ejecutiva-desc">
+      <h3 data-aos="fade-up" data-aos-duration="800">Contáctanos </h3>
+      
+      <div class="medios"></div>
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <form action="">
+          <mat-form-field class="example-full-width">
+            <mat-label>Nombres</mat-label>
+            <input matInput />
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Apellidos</mat-label>
+            <input matInput />
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Por ejemplo tunombre@gmail.com" />
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Asunto</mat-label>
+            <textarea
+              matInput
+              placeholder="Por ejemplo Asunto Cotización Curso Laboral"
+            ></textarea>
+          </mat-form-field>
+        </form>
+        <button class="btn-ejecutiva" data-aos="fade-up" data-aos-duration="1500">
+          Enviar
+        </button>
+        
+      </div>
+  
+    </div>
+    <div class="ejecutiva-img">
+      <img
+        data-aos="fade-zoom-in"
+        data-aos-duration="1500"
+        src="../../../assets/home/home2.png"
+        alt=""
+      />
     </div>
   </div>
 </div>

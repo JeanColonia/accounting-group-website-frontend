@@ -146,6 +146,138 @@
     </div>
   </div>
 
+  <div class="body-container">
+    <h2 class="title-h2">Brindamos una amplia colección de cursos</h2>
+    <p class="paragraph">
+      Elige entre los cursos presenciales y virtuales que brindamos en cada mes.
+    </p>
+
+    <div class="tab-home">
+      <mat-tab-group>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Contable
+            <mat-icon class="example-tab-icon">account_balance</mat-icon>
+          </ng-template>
+          <div class="template-header">
+            <h2>Amplia tus conocimientos con nuestros cursos Contables</h2>
+            <p>
+              Tanto si trabajas en el segmento del aprendizaje automático o de
+              las finanzas como si deseas desarrollar tu carrera en ciencias de
+              datos o desarrollo web, Python es una de las habilidades más
+              importantes que puedes aprender. La sencilla sintaxis de Python es
+              especialmente adecuada para equipos de escritorio
+            </p>
+            <div class="ancla iniciar-sesion">
+              <a href="/">Explorar Contable</a>
+            </div>
+          </div>
+  
+         <swiper
+          [config]="config"
+          (slideChange)="onSlideChange()"
+        >
+          <ng-template swiperSlide *ngFor="let cursoContable of cursosContables">
+            <a class="course-card "
+          >
+            <div class="course-img">
+              <img [src]="cursoContable.imagen" alt="" />
+            </div>
+            <div class="course-desc">
+              <span class="title">{{ cursoContable.titulo }}</span>
+              <p class="docente">{{ cursoContable.docente.apellidos }} {{cursoContable.docente.nombres}}</p>
+              <span class="categoria">{{ cursoContable.categoriacurso.tituloCategoriaCurso }}, Modalidad {{ cursoContable.modalidad.nombre}}</span>
+              <p class="fecha">Inicio: {{ cursoContable.fecha }}</p>
+            </div>
+          </a>
+          </ng-template>
+
+        </swiper>
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Tributario
+            <mat-icon class="example-tab-icon">business</mat-icon>
+          </ng-template>
+          <div class="template-header">
+            <h2>Aprende a detalle todo sobre las Tributaciones</h2>
+            <p>
+              Independientemente del sector en el que trabajes, Microsoft Office
+              Excel es un valioso programa de hoja de cálculo para la
+              organización y representación de datos. Excel ofrece funciones,
+              fórmulas y tablas dinámicas para ayudarte a añadir y analizar
+              grandes conjuntos de información.
+            </p>
+            <div class="ancla iniciar-sesion">
+              <a href="/">Explorar Tributario</a>
+            </div>
+          </div>
+          <swiper
+          [config]="config"
+          (slideChange)="onSlideChange()"
+        >
+          <ng-template swiperSlide *ngFor="let cursoTributario of cursosTributarios">
+            <a class="course-card "
+          >
+            <div class="course-img">
+              <img [src]="cursoTributario.imagen" alt="" />
+            </div>
+            <div class="course-desc">
+              <span class="title">{{ cursoTributario.titulo }}</span>
+              <p class="docente">{{ cursoTributario.docente.apellidos }} {{cursoTributario.docente.nombres}}</p>
+              <span class="categoria">{{ cursoTributario.categoriacurso.tituloCategoriaCurso }}, Modalidad {{ cursoTributario.modalidad.nombre}}</span>
+              <p class="fecha">Inicio: {{ cursoTributario.fecha }}</p>
+            </div>
+          </a>
+          </ng-template>
+
+        </swiper>
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            Laboral
+            <mat-icon class="example-tab-icon">work</mat-icon>
+          </ng-template>
+          <div class="template-header">
+            <h2>Adquiere conocimientos sobre aspectos Laborales</h2>
+            <p>
+              Además de ser la base sobre la que se construyen la mayoría de las
+              formas de arte, el dibujo es también una excelente manera de
+              aliviar el estrés y de alimentar tu creatividad interior. El
+              dibujo nos enseña a ser observadores, a desarrollar la atención al
+              detalle y a expresarnos.
+            </p>
+            <div class="ancla iniciar-sesion">
+              <a href="/">Explorar Laboral</a>
+            </div>
+          </div>
+          <swiper
+          [config]="config"
+          (slideChange)="onSlideChange()"
+        >
+          <ng-template swiperSlide *ngFor="let cursosLaboral of cursosLaborales">
+            <a class="course-card "
+          >
+            <div class="course-img">
+              <img [src]="cursosLaboral.imagen" alt="" />
+            </div>
+            <div class="course-desc">
+              <span class="title">{{ cursosLaboral.titulo }}</span>
+              <p class="docente">{{ cursosLaboral.docente.apellidos }} {{cursosLaboral.docente.nombres}}</p>
+              <span class="categoria">{{ cursosLaboral.categoriacurso.tituloCategoriaCurso }}, Modalidad {{ cursosLaboral.modalidad.nombre}}</span>
+              <p class="fecha">Inicio: {{ cursosLaboral.fecha }}</p>
+            </div>
+          </a>
+          </ng-template>
+
+        </swiper>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+
   <div class="card-tipo-curso">
     <mat-accordion data-aos="fade-up" data-aos-duration="2000">
       <mat-expansion-panel hideToggle>

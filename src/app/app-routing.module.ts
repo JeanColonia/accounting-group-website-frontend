@@ -34,6 +34,8 @@ import { ActualizarModalidadComponent } from './components/gestion-modalidad/act
 import { ViewTemarioComponent } from './components/gestionar-temario/view-temario/view-temario.component';
 import { AddTemarioComponent } from './components/gestionar-temario/add-temario/add-temario.component';
 import { ActualizarTemarioComponent } from './components/gestionar-temario/actualizar-temario/actualizar-temario.component';
+import { PublicacionesComponent } from './components/publicaciones/publicaciones.component';
+import { ExpertsComponent } from './components/experts/experts.component';
 const routes: Routes = [
   {
     path: 'nosotros',
@@ -54,6 +56,14 @@ const routes: Routes = [
   {
     path: 'eventos',
     component: EventosComponent,
+  },
+  {
+    path: 'publicaciones',
+    component: PublicacionesComponent,
+  },
+  {
+    path: 'revista',
+    component: ExpertsComponent,
   },
   
   {

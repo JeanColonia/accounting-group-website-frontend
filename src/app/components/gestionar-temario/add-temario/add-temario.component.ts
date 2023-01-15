@@ -51,7 +51,7 @@ titulo:any;
               timer: 1000,
             });
 
-            this.router.navigate(['dashboard/ver-cursos']);
+            this.router.navigate(['dashboard/ver-temario/',this.idCurso])
         },
         error =>{
           console.log(error);

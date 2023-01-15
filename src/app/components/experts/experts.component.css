@@ -1,0 +1,458 @@
+.eventos-container {
+    margin-top: 63px;
+    width: 100%;
+    min-height: 100%;
+  
+  }
+  
+  .eventos-container .banner {
+    background-image: url("../../../assets/revista-grupo-contable.png");
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  
+  .banner h1 {
+    width: 50%;
+    height: 120px;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 1.5px;
+    background-color: #199FB8;
+    color: #fff;
+    font-family: "Source Sans Pro", "Playfair Display", serif;
+  }
+  
+  
+  .ejecutiva {
+    width: 80%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 130px;
+  
+  }
+  
+  .ejecutiva .ejecutiva-desc {
+    width: 50%;
+    margin-top: -50px;
+  
+  }
+  
+  .ejecutiva .ejecutiva-desc h3 {
+    font-size: 45px;
+    color: var(--celeste);
+    font-weight: bold;
+    line-height: 1.1;
+    margin-top: 10px;
+  
+  }
+  
+  .ejecutiva .ejecutiva-desc p {
+    font-size: 21px;
+    color: #202E44;
+    text-align: center;
+    text-align: left;
+    width: 90%;
+    line-height: 1.1;
+    text-align: justify;
+    margin-top: 10px;
+  
+  }
+  
+  .ejecutiva .ejecutiva-img {
+    width: 50%;
+  }
+  
+  .ejecutiva .ejecutiva-img img {
+    width: 100%;
+    height: 450px;
+    object-fit: contain;
+  }
+  
+  .btn-ejecutiva {
+    height: 50px;
+    width: 120px;
+    background-color: var(--celeste);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .btn-ejecutiva:hover {
+    background-color: rgb(11, 117, 138);
+    ;
+  }
+  
+  
+  .eventos-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height:100vh;
+    margin-top:50px;
+  }
+  
+  .evento-list mat-card{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .evento {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom:20px;
+  }
+  
+  .evento .fecha {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right:20px;
+  
+  }
+  
+  .evento .fecha h6 {
+    font-size: 18px;
+    color: rgb(119, 118, 118);
+    font-weight:bold;
+    font-family: "Source Sans Pro", "Roboto", sans-serif;
+  
+  }
+  
+  .evento .fecha span {
+    font-size: 13px;
+    color: rgb(73, 73, 73);
+    font-weight:500;
+    font-family: "Source Sans Pro", "Roboto", sans-serif;
+  
+  
+  }
+  
+  
+  .evento .fecha img {
+    width: 150px;
+    height: 120px;
+    object-fit: contain;
+  }
+  
+  .evento .descripcion {
+    width: 600px;
+    height: 100%;
+      margin-right:20px;
+  }
+  
+  .evento .descripcion h3 {
+    font-family: "Source Sans Pro", "Roboto", sans-serif;
+    font-size: 20px;
+    word-wrap: nowrap;
+    text-overflow: ellipsis;
+    margin:0;
+    padding:0;
+    font-weight: bold;
+    color:rgb(16,149,175);
+  
+  }
+  
+  .evento .descripcion p {
+    width: 595px;
+    font-family: "Source Sans Pro", "Roboto", sans-serif;
+    font-size: 13px;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 90px;
+    overflow: hidden;
+    text-align: justify;
+  
+  }
+  
+  .evento .mas {
+    width: 100px;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .evento .mas button{
+    background-color:rgb(16,149,175);
+  }
+  
+  
+   
+  
+  /****** CONTACTENOS-HOME*********/
+  
+  svg{
+    margin-top:50px;
+    width: 100%;
+  }
+  .contacto-form{
+    width: 50%;
+    height:200px;
+    margin: 0 auto;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top:-20px !important;
+  
+  
+    
+  
+  }
+  
+  .contacto-form .ejecutiva-desc{
+    min-width: 300px;
+  }
+  
+  .contacto-form .ejecutiva-img{
+    min-width: 300px;
+  }
+  .contacto-form .ejecutiva-desc p{
+    font-size:18px;
+  }
+  
+  .contacto-form form{
+    min-width: 250px;
+    width:70%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  
+  
+  }
+  
+  /******* educación ejecutiva *********/
+  .ejecutiva{
+      width: 80%;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    
+    }
+    .ejecutiva .ejecutiva-desc{
+      width: 50%;
+      margin-top:-50px;
+    
+    }
+    
+    .ejecutiva .ejecutiva-desc h3{
+      font-size: 37px;
+      color: var(--celeste);
+      font-weight: bold;
+      line-height: 1.1;
+      margin-top:10px;
+    
+    }
+    
+    .ejecutiva .ejecutiva-desc p{
+      font-size: 21px;
+      color: #202E44;
+      text-align: center;  
+      text-align:left;
+      width: 90%;
+      line-height: 1.1;
+      text-align: justify;
+      margin-top:10px;
+    
+    }
+    .ejecutiva .ejecutiva-img{
+      width: 50%;
+    }
+    
+    .ejecutiva .ejecutiva-img img{
+      width:100%;
+      height:450px;
+      object-fit: contain;
+    }
+    
+    .btn-ejecutiva{
+      height: 50px;
+      width: 120px;
+      background-color: var(--celeste);
+      border:none;
+      border-radius: 50px;
+      color: #fff;
+      margin-top:10px;
+      font-weight: bold;
+    }
+    
+    .btn-ejecutiva:hover{
+    background-color: rgb(11, 117, 138);; 
+    }
+
+
+
+    /***** NUESTRO EDITORIAL************/
+
+    .comite-editorial{
+        width: 100%;
+        min-height:100%;
+        display:flex;
+        flex-direction: column;
+    }
+    .comite-editorial .encabezado{
+        width: 70%;
+        height: 200px;
+        margin:0 auto;
+        text-align: center;
+        margin-bottom:100px;
+    }
+
+    
+   .encabezado h1{
+        width: 100%;
+        height: 80px;
+        font-size: 45px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 2;
+        letter-spacing: 1.5px;
+        color: #199FB8;
+        font-family: "Source Sans Pro", "Playfair Display", serif;
+        margin:0;
+    }
+
+       
+   .encabezado span{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+     color: #464646;
+    font-family: "Source Sans Pro", "Playfair Display", serif;
+    margin-bottom:10px;
+}
+
+.encabezado .comite-descripcion{
+    width: 90%;
+    min-height:60px;
+    margin:0 auto;
+    background-color:rgb(16,148,174);
+    margin-bottom:100px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.comite-descripcion p{
+  font-size: 13.5px;
+  color:#fff;
+  font-family: "Source Sans Pro", "Playfair Display", serif;
+  padding-top:10px;
+  letter-spacing:2px;
+  text-transform: uppercase;
+}
+
+
+ .comite{
+    width: 95%;
+    min-height: 600px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+
+
+}
+
+.comite mat-accordion{
+    width: 300px;
+    height:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom:15px;
+
+}
+
+mat-expansion-panel{
+
+    height: 100%;
+    text-align: justify;
+    padding-top:20px;
+    padding-bottom:10px;
+}
+
+.comite mat-accordion mat-expansion-panel-header{
+  width: 100%;
+  text-align: center;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+mat-expansion-panel-header img{
+    width: 70px;
+    height:70px;
+    border-radius: 50%;
+    margin-bottom:10px;
+}
+
+
+mat-panel-description{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-panel-description h5{
+   font-weight: bold;
+   color: rgb(16,148,174);
+   font-size: 17px;
+   margin:0;
+   padding:0;
+}
+
+mat-panel-description span{
+   font-size: 14.5px;
+   margin:0;
+   padding:0;
+
+}
+
+mat-panel-description p{
+    font-size: 13px;
+    color:#3a3a3a;
+    margin:0;
+    padding:0;
+
+
+ 
+ }

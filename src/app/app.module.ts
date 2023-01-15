@@ -22,15 +22,8 @@ import { DocentesComponent } from './components/docentes/docentes.component';
 
 import { FormsModule } from '@angular/forms';
 
-
-
-/*** Swiper */
-
-import { SwiperModule } from 'swiper/angular';
-
 /**http */
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { CourseService } from './services/course.service';
 import { ViewCursoComponent } from './components/gestion-curso/view-curso/view-curso.component';
 import { AddCursoComponent } from './components/gestion-curso/add-curso/add-curso.component';
 import { ActualizarCursoComponent } from './components/gestion-curso/actualizar-curso/actualizar-curso.component';
@@ -64,6 +57,8 @@ import { ViewModalidadComponent } from './components/gestion-modalidad/view-moda
 import { AddModalidadComponent } from './components/gestion-modalidad/add-modalidad/add-modalidad.component';
 import { ActualizarModalidadComponent } from './components/gestion-modalidad/actualizar-modalidad/actualizar-modalidad.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { SwiperModule } from 'swiper/angular';
+import { CursoService } from './services/curso.service';
 
 @NgModule({
   declarations: [
@@ -125,7 +120,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     AngularEditorModule
     
   ],
-  providers: [CourseService, LoginGuard],
+  providers: [CursoService, LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
